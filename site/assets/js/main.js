@@ -1,0 +1,1 @@
+(()=>{const b=document.querySelector(".menu-toggle"),m=document.querySelector(".menu");if(b&&m)b.addEventListener("click",()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))});document.addEventListener("click",e=>{const a=e.target.closest("[data-event]");if(a&&window.dataLayer)window.dataLayer.push({event:a.dataset.event})})})();
