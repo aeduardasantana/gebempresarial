@@ -2,37 +2,35 @@ name: Deploy GEB Empresarial
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   deploy:
-    name: Deploy FTP Locaweb
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    env:
-      FTP_HOST: ${{ secrets.HOST }}
-      FTP_USER: ${{ secrets.USER }}
-      FTP_PASS: ${{ secrets.PASS }}
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v5
 
       - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-
-      - name: Upload site
-        shell: bash
         run: |
-          set -e
-          lftp -c "
-            set ftp:passive-mode true;
-            set ftp:ssl-allow no;
-            set net:timeout 20;
-            set net:max-retries 2;
-            open -p 21 -u \"$FTP_USER\",\"$FTP_PASS\" \"$FTP_HOST\";
-            cd public_html/gebempresarial;
-            mirror --reverse --verbose --only-newer ./site/ .;
-            bye
-          "
+          sudo apt-get update
+          sudo apt-get install -y lftp
+
+      - name: Test FTP connection
+        env:
+          FTP_HOST: ${{ secrets.HOST }}
+          FTP_USER: ${{ secrets.USER }}
+          FTP_PASS: ${{ secrets.PASS }}
+        run: |
+          lftp -e "set ftp:passive-mode true; set ftp:ssl-allow no; ls; bye" -u "$FTP_USER","$FTP_PASS" "$FTP_HOST"
+
+      - name: Deploy site
+        env:
+          FTP_HOST: ${{ secrets.HOST }}
+          FTP_USER: ${{ secrets.USER }}
+          FTP_PASS: ${{ secrets.PASS }}
+        run: |
+          lftp -e "set ftp:passive-mode true; set ftp:ssl-allow no; mirror --reverse --delete --verbose ./site/ ./public_html/gebempresarial/; bye" -u "$FTP_USER","$FTP_PASS" "$FTP_HOST"
