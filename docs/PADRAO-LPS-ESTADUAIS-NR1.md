@@ -143,7 +143,7 @@ Não afirmar:
 - diagnóstico clínico;
 - conformidade garantida;
 - PGR completo;
-- “13 riscos obrigatórios”.
+- “13 fatores citados pelo MTE” — comunicar como listagem exemplificativa, não exaustiva.
 
 ## Programa contínuo
 Deve falar sobre:
@@ -201,7 +201,7 @@ A NR-1 inclui expressamente os fatores de riscos psicossociais relacionados ao t
 A nova redação do capítulo 1.5 entrou em vigor em 26 de maio de 2026.
 
 ## Não usar
-- “13 riscos psicossociais exigidos pela NR-1”;
+- “13 fatores de riscos psicossociais citados pelo MTE”;
 - “conformidade garantida”;
 - “blindagem jurídica”;
 - “evite multas” como promessa comercial;
@@ -211,7 +211,7 @@ A nova redação do capítulo 1.5 entrou em vigor em 26 de maio de 2026.
 
 ## Sobre “13 riscos”
 Pode aparecer no FAQ por intenção de busca, com correção:
-> A NR-1 não apresenta uma lista oficial e numerada de 13 riscos psicossociais.
+> O Guia oficial do MTE apresenta uma listagem exemplificativa de 13 fatores de riscos psicossociais relacionados ao trabalho. A listagem não é exaustiva e deve ser apresentada como referência oficial exemplificativa, não como rol fechado de todos os fatores possíveis.
 
 ## Sobre suspensão
 Se a situação regulatória mudar, revisar imediatamente todas as LPs.
@@ -229,7 +229,7 @@ Todas as LPs estaduais devem conter, adaptadas ao estado:
 5. O que a NR-1 exige em relação aos fatores de riscos psicossociais?
 6. Quais são 3 exemplos de riscos psicossociais no trabalho?
 7. O que é gestão de riscos psicossociais?
-8. Quais são os 13 riscos psicossociais da NR-1?
+8. Quais são os 13 fatores de riscos psicossociais citados pelo MTE?
 9. Como implantar a NR-1 na empresa?
 10. O que são GRO e PGR na NR-1?
 11. Onde entram o inventário de riscos e o plano de ação?
@@ -350,7 +350,7 @@ Não criar telefones diferentes por estado sem diretriz comercial.
 - [ ] Contexto regional é real e específico?
 - [ ] MTE, GRO, PGR, inventário e plano de ação estão corretamente usados?
 - [ ] Não existe promessa de conformidade?
-- [ ] Não existe lista normativa fictícia de 13 riscos?
+- [ ] A referência aos 13 fatores está apresentada corretamente como listagem exemplificativa do Guia oficial do MTE, sem tratá-la como rol exaustivo?
 - [ ] FAQ nacional está presente?
 - [ ] FAQ local está adaptado?
 - [ ] Title e meta description foram localizados?
