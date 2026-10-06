@@ -113,7 +113,7 @@ Pode haver futuramente uma etapa intermediária de captação de dados, desde qu
 # 6. Hero — regra fixa
 
 ## Elementos
-- badge “Atendimento no [Estado]”
+- badge “Atendimento no [Estado]” com ícone fixo de bússola; não usar forma territorial genérica nem tentar simular o mapa da UF
 - H1: **NR-1 no [Estado]**
 - subtítulo com:
   - diagnóstico de riscos psicossociais;
