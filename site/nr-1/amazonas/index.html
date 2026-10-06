@@ -29,7 +29,9 @@ nav a:hover{color:var(--green)}
 .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;min-height:570px}
 .hero-copy{padding:70px 0 46px;position:relative;z-index:2}
 .badge{display:inline-flex;align-items:center;gap:10px;background:#e7f2ec;color:var(--green);border-radius:999px;padding:10px 14px;font-size:13px;font-weight:850}
-.mapchip{width:23px;height:23px;background:var(--green);clip-path:polygon(16% 15%,49% 5%,78% 18%,88% 43%,71% 68%,45% 94%,18% 81%,7% 51%)}
+.mapchip{width:23px;height:23px;border:2px solid var(--green);border-radius:50%;position:relative;display:inline-block;flex:0 0 23px}
+.mapchip:before{content:"";position:absolute;left:50%;top:50%;width:5px;height:15px;background:var(--green);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%);transform:translate(-50%,-50%) rotate(32deg)}
+.mapchip:after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%)}
 h1{margin:26px 0 18px;font-family:Georgia,"Times New Roman",serif;font-size:79px;line-height:.94;letter-spacing:-.045em}
 h1 .nr{font-family:Inter,system-ui,sans-serif;color:var(--green);font-weight:900}
 h1 .state{color:var(--gold)}
