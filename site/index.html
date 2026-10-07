@@ -15,6 +15,10 @@
 .home-path h3{font-size:1.45rem;margin:.5rem 0 .75rem}
 .home-path p{color:#4f5b54;flex:1}
 .home-path .more{font-weight:800}
+.home-journey{padding:1.4rem 0 1.4rem 1.8rem;border-left:3px solid var(--accent)}
+.home-journey-line{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin:.8rem 0 .65rem;font-weight:800;font-size:1.05rem}
+.home-journey-line i{font-style:normal;color:#8a6713;font-weight:500}
+.home-journey p{margin:0;color:#4d5a52;max-width:420px}
 .home-band{background:var(--ink);color:#fff;padding:1rem 0}
 .home-band .wrap{display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap;font-weight:800}
 .home-band span{color:#e3bd58}
@@ -41,16 +45,17 @@
 <style id="core-link-system">
 .topbar a,.footer a,main a:not(.btn){text-decoration:none}
 .topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.86}
-main .btn{border-radius:9px;min-height:48px;padding:.8rem 1.2rem;text-align:center;line-height:1.25}
-main .actions,main .ecoar-actions{align-items:stretch}
-main .actions .btn,main .ecoar-actions .btn{flex:1 1 0;min-width:220px;max-width:320px}
-main .card{display:flex;flex-direction:column}
-main .card .action-btn,main .home-path .action-btn{width:100%;margin-top:auto}
-main .ecoar-path .btn{width:100%}
-main .cta>.btn{min-width:280px;max-width:320px}
-.site-map-card a:hover,.site-map-states a:hover{text-decoration:none}
+main .btn{border-radius:8px;min-height:46px;padding:.72rem 1.1rem;text-align:center;line-height:1.25}
+main .actions{align-items:stretch}
+main .actions .btn{flex:0 1 280px;min-width:220px}
+main .home-path .action-btn,
+main .card .action-btn{width:auto;align-self:flex-start;margin-top:auto;min-width:180px}
+main .dark .btn.ghost{background:transparent;color:#fff;border-color:#8fa096}
+main .dark .btn.ghost:hover{background:#fff;color:var(--ink);opacity:1}
+main .cta>.btn{min-width:250px;max-width:300px}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-@media(max-width:600px){main .actions .btn,main .ecoar-actions .btn,main .cta>.btn{width:100%;max-width:none;min-width:0}}
+@media(max-width:900px){.home-journey{padding:1.2rem 0;border-left:0;border-top:2px solid var(--accent)}}
+@media(max-width:600px){main .actions .btn,main .cta>.btn{width:100%;max-width:none;min-width:0;flex-basis:auto}}
 </style></head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -91,10 +96,16 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
         <a class="btn ghost" href="/orcamento/">Falar com o GEB Empresarial</a>
       </div>
     </div>
-    <aside class="hero-panel">
+    <aside class="home-journey" aria-label="Nossa lógica de atuação">
       <span class="eyebrow">Nossa lógica de atuação</span>
-      <strong>Entender → avaliar → priorizar → agir → acompanhar.</strong>
-      <p>Uma jornada construída a partir da realidade da organização, e não de uma solução genérica.</p>
+      <div class="home-journey-line">
+        <span>Entender</span><i aria-hidden="true">→</i>
+        <span>Avaliar</span><i aria-hidden="true">→</i>
+        <span>Priorizar</span><i aria-hidden="true">→</i>
+        <span>Agir</span><i aria-hidden="true">→</i>
+        <span>Acompanhar</span>
+      </div>
+      <p>Uma jornada construída a partir da realidade da organização.</p>
     </aside>
   </div>
 </section>
@@ -206,7 +217,7 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
         <span class="tag">Palestras e workshops</span>
         <h3>Intervenções com propósito definido</h3>
         <p>Temas e formatos são definidos a partir da necessidade real da empresa — não apenas de uma data no calendário.</p>
-        <a class="btn ghost action-btn" href="/palestras/">Conhecer</a>
+        <a class="btn ghost action-btn" href="/palestras/">Conhecer palestras</a>
       </article>
       <article class="card">
         <span class="tag">Comunicação</span>
