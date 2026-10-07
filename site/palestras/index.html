@@ -1,12 +1,158 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Palestras e Treinamentos | GEB Empresarial</title><meta name="description" content="Palestras, workshops e treinamentos para empresas, equipes e lideranças."><meta name="theme-color" content="#14211b"><link rel="canonical" href="https://gebempresarial.grupoeduardabispo.com.br/palestras/"><link rel="stylesheet" href="/assets/css/style.css"><style id="core-link-system">
-.topbar a,.footer a,main a:not(.btn){text-decoration:none}
-.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.86}
-main .btn{border-radius:9px;min-height:48px;padding:.8rem 1.2rem;text-align:center;line-height:1.25}
-main .actions{align-items:stretch}
-main .actions .btn{flex:1 1 0;min-width:220px;max-width:320px}
-main .card{display:flex;flex-direction:column}
-main .card .action-btn{width:100%;margin-top:auto}
-main .cta>.btn{min-width:280px;max-width:320px}
-a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-@media(max-width:600px){main .actions .btn,main .cta>.btn{width:100%;max-width:none;min-width:0}}
-</style></head><body><a class="skip" href="#conteudo">Pular para o conteúdo</a><div class="topbar"><div class="wrap"><span>GEB Empresarial · soluções para organizações e relações de trabalho</span><a href="mailto:empresarial@grupoeduardabispo.com.br"><span aria-hidden="true">✉</span> empresarial@grupoeduardabispo.com.br</a></div></div><header class="site-header"><div class="wrap nav"><a class="brand" href="/">GEB Empresarial<small>Grupo Eduarda Bispo</small></a><button class="menu-toggle" aria-expanded="false">Menu</button><nav class="menu"><a href="/nr-1/">NR-1</a><a href="/solucoes/">Soluções</a><a href="/palestras/">Palestras</a><a href="/ecoar/">ECOAR</a><a href="/conteudo/">Conteúdo</a><a href="/sobre/">Sobre</a><a class="btn primary" href="/orcamento/">Solicitar orçamento</a></nav></div></header><main id="conteudo"><section class="page-hero"><div class="wrap"><h1>Ações que respondem a uma necessidade real da organização</h1><p class="lead">Palestras, workshops e treinamentos podem ser independentes ou integrados a programas mais amplos.</p><a class="btn primary" href="/orcamento/">Solicitar proposta</a></div></section><section class="section"><div class="wrap grid three"><article class="card"><h3>Saúde psicossocial e trabalho</h3></article><article class="card"><h3>Liderança e equipes</h3></article><article class="card"><h3>Comunicação</h3></article></div></section><section class="section soft"><div class="wrap"><div class="quote">Uma palestra pode fazer parte da intervenção. Ela não é a gestão inteira.</div></div></section></main><footer class="footer"><div class="wrap footer-grid"><div><strong>GEB Empresarial</strong><p>Soluções para riscos psicossociais, desenvolvimento e comunicação.</p><small>Integra o ecossistema GEB — Grupo Eduarda Bispo.</small></div><div><strong>Soluções</strong><p><a href="/nr-1/diagnostico/">Diagnóstico</a><br><a href="/nr-1/programa-continuo/">Programa contínuo</a><br><a href="/palestras/">Palestras</a><br><a href="/ecoar/">ECOAR</a></p></div><div><strong>Institucional</strong><p><a href="/contato/">Contato</a><br><a href="/acessibilidade/">Acessibilidade</a><br><a href="/privacidade/">Privacidade</a><br><a href="/termos/">Termos</a></p></div></div><div class="wrap footer-bottom"><small>© 2026 GEB — Grupo Eduarda Bispo.</small></div></footer><div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div><script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script><script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script><script src="/assets/js/main.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Palestras, Workshops e Treinamentos | GEB Empresarial</title>
+<meta name="description" content="Palestras, workshops, treinamentos e ações corporativas estruturadas conforme a necessidade de empresas, equipes e lideranças.">
+<meta name="theme-color" content="#14211b">
+<link rel="canonical" href="https://gebempresarial.grupoeduardabispo.com.br/palestras/">
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+.talks-hero{padding:4.8rem 0;background:var(--paper)}
+.talks-hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}
+.talks-note{border-left:3px solid var(--accent);padding:1rem 0 1rem 1.4rem}
+.talks-note strong{display:block;font-size:1.35rem;line-height:1.25}
+.talks-note p{margin:.65rem 0 0;color:#4e5a53}
+.talks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.talks-card{border:1px solid var(--line);padding:1.5rem;background:#fff}
+.talks-card h3{margin:.45rem 0 .7rem}
+.talks-card p{margin:0;color:#4f5b54}
+.talks-formats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.talks-format{border-top:3px solid var(--accent);padding-top:1rem}
+.talks-format strong{display:block;margin-bottom:.35rem}
+.talks-process{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.talks-process div{padding-top:1rem;border-top:1px solid #bfc8c0}
+.talks-process b{display:block;color:#745d18;font-size:.8rem;letter-spacing:.08em;margin-bottom:.35rem}
+.talks-rel{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.talks-rel-box{background:#fff;border:1px solid var(--line);padding:1.6rem}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;align-items:stretch}
+main .btn{border-radius:8px;min-height:46px;padding:.72rem 1.1rem;text-align:center;line-height:1.25}
+.actions .btn{flex:0 1 290px;min-width:220px}
+.footer a,.topbar a{text-decoration:none}
+@media(max-width:900px){.talks-hero-grid,.talks-grid,.talks-formats,.talks-process,.talks-rel{grid-template-columns:1fr}}
+@media(max-width:600px){.actions .btn{width:100%;min-width:0;flex-basis:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="topbar"><div class="wrap"><span>GEB Empresarial · soluções para organizações e relações de trabalho</span><a href="mailto:empresarial@grupoeduardabispo.com.br"><span aria-hidden="true">✉</span> empresarial@grupoeduardabispo.com.br</a></div></div>
+<header class="site-header"><div class="wrap nav"><a class="brand" href="/">GEB Empresarial<small>Grupo Eduarda Bispo</small></a><button class="menu-toggle" aria-expanded="false">Menu</button><nav class="menu"><a href="/nr-1/">NR-1</a><a href="/solucoes/">Soluções</a><a href="/palestras/">Palestras</a><a href="/ecoar/">ECOAR</a><a href="/sobre/">Sobre</a><a class="btn primary" href="/orcamento/">Solicitar orçamento</a></nav></div></header>
+
+<main id="conteudo">
+<section class="talks-hero">
+  <div class="wrap talks-hero-grid">
+    <div>
+      <div class="eyebrow">Palestras · Workshops · Treinamentos</div>
+      <h1>Uma ação corporativa precisa fazer sentido para o problema que a empresa quer resolver.</h1>
+      <p class="lead">O GEB Empresarial estrutura palestras, workshops, treinamentos e intervenções educativas para empresas, equipes e lideranças — de forma independente ou conectadas a projetos mais amplos.</p>
+      <div class="actions">
+        <a class="btn primary" href="/orcamento/">Quero montar uma ação para minha empresa</a>
+        <a class="btn ghost" href="/contato/">Falar com um especialista</a>
+      </div>
+    </div>
+    <aside class="talks-note">
+      <strong>Não começamos pelo tema. Começamos pela necessidade.</strong>
+      <p>Público, objetivo, contexto e resultado esperado orientam o formato da ação.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Quando essa solução faz sentido</div>
+      <h2>Para demandas pontuais ou como parte de uma estratégia maior.</h2>
+      <p>Uma palestra pode abrir uma conversa. Um workshop pode aprofundar uma competência. Um treinamento pode estruturar uma prática. A escolha depende do que precisa mudar depois da ação.</p>
+    </div>
+    <div class="talks-grid">
+      <article class="talks-card"><div class="eyebrow">01</div><h3>Sensibilizar</h3><p>Quando a empresa precisa colocar um tema em pauta, criar linguagem comum ou iniciar uma mudança de percepção.</p></article>
+      <article class="talks-card"><div class="eyebrow">02</div><h3>Desenvolver</h3><p>Quando equipes ou lideranças precisam ampliar repertório, comunicação, postura ou capacidade de atuação.</p></article>
+      <article class="talks-card"><div class="eyebrow">03</div><h3>Intervir</h3><p>Quando a ação faz parte de um plano maior, relacionado a riscos psicossociais, relações de trabalho ou desenvolvimento organizacional.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Temas possíveis</div>
+      <h2>O tema é definido conforme o contexto da organização.</h2>
+      <p>O portfólio não funciona como catálogo fechado. Abaixo estão frentes que podem orientar a construção do projeto.</p>
+    </div>
+    <div class="talks-grid">
+      <article class="talks-card"><h3>Riscos psicossociais e trabalho</h3><p>Conscientização, prevenção, organização do trabalho e responsabilidades relacionadas ao ambiente laboral.</p></article>
+      <article class="talks-card"><h3>Liderança e equipes</h3><p>Comunicação, relações de trabalho, condução de equipes, responsabilidade de liderança e desenvolvimento coletivo.</p></article>
+      <article class="talks-card"><h3>Comunicação profissional</h3><p>Clareza, presença, oratória, interação e desenvolvimento comunicacional em contextos profissionais.</p></article>
+      <article class="talks-card"><h3>Assédio e relações de trabalho</h3><p>Ações educativas voltadas à convivência, responsabilidade, prevenção e relações profissionais.</p></article>
+      <article class="talks-card"><h3>Saúde mental e trabalho</h3><p>Abordagens educativas conectadas ao contexto ocupacional e às condições de trabalho.</p></article>
+      <article class="talks-card"><h3>Projetos sob demanda</h3><p>Outros temas empresariais podem ser estruturados conforme objetivo, público e aderência ao escopo do GEB Empresarial.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Formatos</div>
+      <h2>A mesma necessidade pode exigir formatos diferentes.</h2>
+    </div>
+    <div class="talks-formats">
+      <div class="talks-format"><strong>Palestra</strong><span>Exposição estruturada para sensibilização, informação e mobilização.</span></div>
+      <div class="talks-format"><strong>Workshop</strong><span>Formato participativo, com prática, discussão ou construção coletiva.</span></div>
+      <div class="talks-format"><strong>Treinamento</strong><span>Desenvolvimento mais estruturado de conhecimento, competência ou prática.</span></div>
+      <div class="talks-format"><strong>Ação corporativa</strong><span>Intervenção desenhada para uma necessidade específica da organização.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow" style="color:#e3bd58">Como construímos</div>
+      <h2>Do briefing à ação.</h2>
+      <p>O projeto é definido antes da execução para evitar uma palestra genérica desconectada do problema real.</p>
+    </div>
+    <div class="talks-process">
+      <div><b>01</b><strong>Necessidade</strong><span>O que está acontecendo e por que a empresa quer agir agora.</span></div>
+      <div><b>02</b><strong>Público</strong><span>Quem precisa participar e qual o papel desse grupo no tema.</span></div>
+      <div><b>03</b><strong>Formato</strong><span>Palestra, workshop, treinamento ou ação combinada.</span></div>
+      <div><b>04</b><strong>Resultado esperado</strong><span>O que a organização espera que aconteça depois da intervenção.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="wrap talks-rel">
+    <div>
+      <div class="eyebrow">Relação com programas contínuos</div>
+      <h2>Uma palestra pode fazer parte da intervenção. Ela não é a gestão inteira.</h2>
+      <p>Quando a empresa já possui diagnóstico de riscos psicossociais, palestras, workshops e treinamentos podem integrar um programa contínuo, desde que estejam relacionados às prioridades e medidas definidas para a organização.</p>
+    </div>
+    <div class="talks-rel-box">
+      <strong>Já possui diagnóstico?</strong>
+      <p>O GEB pode avaliar a possibilidade de estruturar continuidade a partir de diagnóstico realizado anteriormente, conforme o escopo e as condições técnicas do projeto.</p>
+      <a class="btn ghost" href="/nr-1/programa-continuo/">Conhecer o programa contínuo</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap cta">
+    <div>
+      <div class="eyebrow">Vamos construir a ação?</div>
+      <h2>Conte o que sua empresa precisa trabalhar.</h2>
+      <p>A partir do contexto, público e objetivo, definimos o formato mais adequado.</p>
+    </div>
+    <a class="btn accent" href="/orcamento/">Montar uma ação para minha empresa</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="wrap footer-grid"><div><strong>GEB Empresarial</strong><p>Soluções para riscos psicossociais, desenvolvimento e comunicação.</p><small>Integra o ecossistema GEB — Grupo Eduarda Bispo.</small></div><div><strong>Soluções</strong><p><a href="/nr-1/diagnostico/">Diagnóstico</a><br><a href="/nr-1/programa-continuo/">Programa contínuo</a><br><a href="/palestras/">Palestras</a><br><a href="/ecoar/">ECOAR</a></p></div><div><strong>Institucional</strong><p><a href="/contato/">Contato</a><br><a href="/acessibilidade/">Acessibilidade</a><br><a href="/privacidade/">Privacidade</a><br><a href="/termos/">Termos</a></p></div></div><div class="wrap footer-bottom"><small>© 2026 GEB — Grupo Eduarda Bispo.</small></div></footer>
+<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
