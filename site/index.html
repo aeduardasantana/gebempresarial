@@ -40,11 +40,17 @@
 </style>
 <style id="core-link-system">
 .topbar a,.footer a,main a:not(.btn){text-decoration:none}
-.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.82}
-.footer a span{color:var(--accent);font-weight:900}
-main a.more{display:inline-flex;align-items:center;gap:.3rem;font-weight:800}
+.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.86}
+main .btn{border-radius:9px;min-height:48px;padding:.8rem 1.2rem;text-align:center;line-height:1.25}
+main .actions,main .ecoar-actions{align-items:stretch}
+main .actions .btn,main .ecoar-actions .btn{flex:1 1 0;min-width:220px;max-width:320px}
+main .card{display:flex;flex-direction:column}
+main .card .action-btn,main .home-path .action-btn{width:100%;margin-top:auto}
+main .ecoar-path .btn{width:100%}
+main .cta>.btn{min-width:280px;max-width:320px}
 .site-map-card a:hover,.site-map-states a:hover{text-decoration:none}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:600px){main .actions .btn,main .ecoar-actions .btn,main .cta>.btn{width:100%;max-width:none;min-width:0}}
 </style></head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -115,21 +121,21 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
         <span class="tag">01 · Diagnóstico</span>
         <h3>Ainda precisamos compreender os riscos psicossociais</h3>
         <p>Para organizações que precisam identificar fatores relacionados ao trabalho, organizar evidências e estabelecer prioridades de atuação.</p>
-        <a class="more" href="/nr-1/diagnostico/">Conhecer o diagnóstico →</a>
+        <a class="btn ghost action-btn" href="/nr-1/diagnostico/">Conhecer o diagnóstico</a>
       </article>
 
       <article class="home-path">
         <span class="tag">02 · Continuidade</span>
         <h3>Já temos diagnóstico e precisamos agir</h3>
         <p>O GEB pode estruturar um programa contínuo a partir de diagnóstico próprio ou realizado anteriormente por outro fornecedor.</p>
-        <a class="more" href="/nr-1/programa-continuo/">Conhecer o programa contínuo →</a>
+        <a class="btn ghost action-btn" href="/nr-1/programa-continuo/">Conhecer o programa contínuo</a>
       </article>
 
       <article class="home-path">
         <span class="tag">03 · Desenvolvimento</span>
         <h3>Temos uma demanda específica de pessoas ou equipes</h3>
         <p>Palestras, workshops, treinamentos e experiências de desenvolvimento podem ser estruturados conforme público, objetivo e contexto.</p>
-        <a class="more" href="/palestras/">Ver desenvolvimento e palestras →</a>
+        <a class="btn ghost action-btn" href="/palestras/">Ver desenvolvimento e palestras</a>
       </article>
     </div>
   </div>
@@ -153,13 +159,13 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
         <span class="tag">Diagnóstico</span>
         <h3>Compreender fatores e prioridades</h3>
         <p>Levantamento estruturado para apoiar a identificação de fatores de risco psicossociais relacionados ao trabalho.</p>
-        <a class="more" href="/nr-1/diagnostico/">Conhecer →</a>
+        <a class="btn ghost action-btn" href="/nr-1/diagnostico/">Conhecer</a>
       </article>
       <article class="card">
         <span class="tag">Programa contínuo</span>
         <h3>Transformar resultado em gestão</h3>
         <p>Ações, responsáveis, evidências, indicadores e revisão organizados em uma lógica de acompanhamento.</p>
-        <a class="more" href="/nr-1/programa-continuo/">Conhecer →</a>
+        <a class="btn ghost action-btn" href="/nr-1/programa-continuo/">Conhecer</a>
       </article>
     </div>
   </div>
@@ -200,13 +206,13 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
         <span class="tag">Palestras e workshops</span>
         <h3>Intervenções com propósito definido</h3>
         <p>Temas e formatos são definidos a partir da necessidade real da empresa — não apenas de uma data no calendário.</p>
-        <a class="more" href="/palestras/">Conhecer →</a>
+        <a class="btn ghost action-btn" href="/palestras/">Conhecer</a>
       </article>
       <article class="card">
         <span class="tag">Comunicação</span>
         <h3>ECOAR</h3>
         <p>Laboratório de Oratória Bilíngue voltado à prática de comunicação, presença profissional, networking e liderança.</p>
-        <a class="more" href="/ecoar/">Conhecer o ECOAR →</a>
+        <a class="btn ghost action-btn" href="/ecoar/">Conhecer o ECOAR</a>
       </article>
     </div>
   </div>
@@ -279,7 +285,7 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     <div class="notice">
       <strong>Encontre a página do seu estado.</strong>
       <p>Acesse o mapa do site para navegar pelas páginas estaduais e demais conteúdos especializados do GEB Empresarial.</p>
-      <a class="more" href="/mapa-do-site/">Ver páginas por estado →</a>
+      <a class="btn ghost action-btn" href="/mapa-do-site/">Ver páginas por estado</a>
     </div>
   </div>
 </section>
@@ -307,20 +313,20 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     <div>
       <strong>Soluções</strong>
       <p>
-        <a href="/nr-1/diagnostico/">Diagnóstico <span aria-hidden="true">→</span></a><br>
-        <a href="/nr-1/programa-continuo/">Programa contínuo <span aria-hidden="true">→</span></a><br>
-        <a href="/palestras/">Palestras <span aria-hidden="true">→</span></a><br>
-        <a href="/ecoar/">ECOAR <span aria-hidden="true">→</span></a>
+        <a href="/nr-1/diagnostico/">Diagnóstico</a><br>
+        <a href="/nr-1/programa-continuo/">Programa contínuo</a><br>
+        <a href="/palestras/">Palestras</a><br>
+        <a href="/ecoar/">ECOAR</a>
       </p>
     </div>
     <div>
       <strong>Institucional</strong>
       <p>
-        <a href="/contato/">Contato <span aria-hidden="true">→</span></a><br>
-        <a href="/acessibilidade/">Acessibilidade <span aria-hidden="true">→</span></a><br>
-        <a href="/privacidade/">Privacidade <span aria-hidden="true">→</span></a><br>
-        <a href="/termos/">Termos <span aria-hidden="true">→</span></a><br>
-        <a href="/mapa-do-site/">Mapa do Site <span aria-hidden="true">→</span></a>
+        <a href="/contato/">Contato</a><br>
+        <a href="/acessibilidade/">Acessibilidade</a><br>
+        <a href="/privacidade/">Privacidade</a><br>
+        <a href="/termos/">Termos</a><br>
+        <a href="/mapa-do-site/">Mapa do Site</a>
       </p>
     </div>
   </div>

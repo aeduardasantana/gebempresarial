@@ -73,11 +73,17 @@
 </style>
 <style id="core-link-system">
 .topbar a,.footer a,main a:not(.btn){text-decoration:none}
-.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.82}
-.footer a span{color:var(--accent);font-weight:900}
-main a.more{display:inline-flex;align-items:center;gap:.3rem;font-weight:800}
+.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.86}
+main .btn{border-radius:9px;min-height:48px;padding:.8rem 1.2rem;text-align:center;line-height:1.25}
+main .actions,main .ecoar-actions{align-items:stretch}
+main .actions .btn,main .ecoar-actions .btn{flex:1 1 0;min-width:220px;max-width:320px}
+main .card{display:flex;flex-direction:column}
+main .card .action-btn,main .home-path .action-btn{width:100%;margin-top:auto}
+main .ecoar-path .btn{width:100%}
+main .cta>.btn{min-width:280px;max-width:320px}
 .site-map-card a:hover,.site-map-states a:hover{text-decoration:none}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media(max-width:600px){main .actions .btn,main .ecoar-actions .btn,main .cta>.btn{width:100%;max-width:none;min-width:0}}
 </style></head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -230,10 +236,10 @@ a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 </div>
 </section>
 
-<section class="section"><div class="wrap"><div class="ecoar-secondary"><strong>Coleção ECOAR</strong> — produtos e materiais temáticos podem ser consultados na loja do GEB. <a class="more" href="https://loja.grupoeduardabispo.com.br/" rel="noopener">Acessar loja <span aria-hidden="true">→</span></a> Esta oferta é complementar e não integra o núcleo metodológico do Laboratório de Oratória.</div></div></section>
+<section class="section"><div class="wrap"><div class="ecoar-secondary"><strong>Coleção ECOAR</strong> — produtos e materiais temáticos podem ser consultados na loja do GEB. <a class="btn ghost action-btn" href="https://loja.grupoeduardabispo.com.br/" rel="noopener">Acessar loja</a> Esta oferta é complementar e não integra o núcleo metodológico do Laboratório de Oratória.</div></div></section>
 </main>
 
-<footer class="footer"><div class="wrap footer-grid"><div><strong>GEB Empresarial</strong><p>Soluções para riscos psicossociais, desenvolvimento e comunicação.</p><small>Integra o ecossistema GEB — Grupo Eduarda Bispo.</small></div><div><strong>Soluções</strong><p><a href="/nr-1/diagnostico/">Diagnóstico <span aria-hidden="true">→</span></a><br><a href="/nr-1/programa-continuo/">Programa contínuo <span aria-hidden="true">→</span></a><br><a href="/palestras/">Palestras <span aria-hidden="true">→</span></a><br><a href="/ecoar/">ECOAR <span aria-hidden="true">→</span></a></p></div><div><strong>Institucional</strong><p><a href="/contato/">Contato <span aria-hidden="true">→</span></a><br><a href="/acessibilidade/">Acessibilidade <span aria-hidden="true">→</span></a><br><a href="/privacidade/">Privacidade <span aria-hidden="true">→</span></a><br><a href="/termos/">Termos <span aria-hidden="true">→</span></a><br><a href="/mapa-do-site/">Mapa do Site <span aria-hidden="true">→</span></a></p></div></div><div class="wrap footer-bottom"><small>© 2026 GEB — Grupo Eduarda Bispo.</small></div></footer>
+<footer class="footer"><div class="wrap footer-grid"><div><strong>GEB Empresarial</strong><p>Soluções para riscos psicossociais, desenvolvimento e comunicação.</p><small>Integra o ecossistema GEB — Grupo Eduarda Bispo.</small></div><div><strong>Soluções</strong><p><a href="/nr-1/diagnostico/">Diagnóstico</a><br><a href="/nr-1/programa-continuo/">Programa contínuo</a><br><a href="/palestras/">Palestras</a><br><a href="/ecoar/">ECOAR</a></p></div><div><strong>Institucional</strong><p><a href="/contato/">Contato</a><br><a href="/acessibilidade/">Acessibilidade</a><br><a href="/privacidade/">Privacidade</a><br><a href="/termos/">Termos</a><br><a href="/mapa-do-site/">Mapa do Site</a></p></div></div><div class="wrap footer-bottom"><small>© 2026 GEB — Grupo Eduarda Bispo.</small></div></footer>
 <div vw class="enabled" aria-label="Acessibilidade em Libras"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
