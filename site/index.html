@@ -34,7 +34,14 @@
 .home-paths,.home-focus,.home-flow,.home-small-grid,.home-method{grid-template-columns:1fr}
 }
 </style>
-</head>
+<style id="core-link-system">
+.topbar a,.footer a,main a:not(.btn){text-decoration:none}
+.topbar a:hover,.footer a:hover,main a:not(.btn):hover{text-decoration:none;opacity:.82}
+.footer a span{color:var(--accent);font-weight:900}
+main a.more{display:inline-flex;align-items:center;gap:.3rem;font-weight:800}
+.site-map-card a:hover,.site-map-states a:hover{text-decoration:none}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+</style></head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
@@ -293,20 +300,20 @@
     <div>
       <strong>Soluções</strong>
       <p>
-        <a href="/nr-1/diagnostico/">Diagnóstico</a><br>
-        <a href="/nr-1/programa-continuo/">Programa contínuo</a><br>
-        <a href="/palestras/">Palestras</a><br>
-        <a href="/ecoar/">ECOAR</a>
+        <a href="/nr-1/diagnostico/">Diagnóstico <span aria-hidden="true">→</span></a><br>
+        <a href="/nr-1/programa-continuo/">Programa contínuo <span aria-hidden="true">→</span></a><br>
+        <a href="/palestras/">Palestras <span aria-hidden="true">→</span></a><br>
+        <a href="/ecoar/">ECOAR <span aria-hidden="true">→</span></a>
       </p>
     </div>
     <div>
       <strong>Institucional</strong>
       <p>
-        <a href="/contato/">Contato</a><br>
-        <a href="/acessibilidade/">Acessibilidade</a><br>
-        <a href="/privacidade/">Privacidade</a><br>
-        <a href="/termos/">Termos</a><br>
-        <a href="/mapa-do-site/">Mapa do Site</a>
+        <a href="/contato/">Contato <span aria-hidden="true">→</span></a><br>
+        <a href="/acessibilidade/">Acessibilidade <span aria-hidden="true">→</span></a><br>
+        <a href="/privacidade/">Privacidade <span aria-hidden="true">→</span></a><br>
+        <a href="/termos/">Termos <span aria-hidden="true">→</span></a><br>
+        <a href="/mapa-do-site/">Mapa do Site <span aria-hidden="true">→</span></a>
       </p>
     </div>
   </div>
