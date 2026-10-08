@@ -19,6 +19,7 @@
 .catalog-line.dark .catalog-head p{color:#d4ddd7}
 .catalog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .catalog-grid.four{grid-template-columns:repeat(4,1fr)}
+.catalog-grid.two{grid-template-columns:repeat(2,1fr)}
 .catalog-card{border:1px solid var(--line);background:#fff;padding:1.5rem;display:flex;flex-direction:column;min-height:285px}
 .catalog-line.dark .catalog-card{background:#1a2a22;border-color:#405249}
 .catalog-card .tag{font-size:.73rem;text-transform:uppercase;letter-spacing:.1em;color:#80600f;font-weight:800}
@@ -35,9 +36,9 @@ main .btn{border-radius:8px;min-height:46px;padding:.72rem 1.1rem;text-align:cen
 .actions{display:flex;gap:.8rem;flex-wrap:wrap;align-items:stretch}
 .actions .btn{flex:0 1 290px;min-width:220px}
 .topbar a,.footer a{text-decoration:none}
-@media(max-width:1000px){.catalog-grid.four{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.catalog-grid.four,.catalog-grid.two{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.catalog-head,.catalog-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.catalog-grid.four{grid-template-columns:1fr}.actions .btn{width:100%;min-width:0;flex-basis:auto}.catalog-card{min-height:0}.catalog-card .btn{width:100%}}
+@media(max-width:600px){.catalog-grid.four,.catalog-grid.two{grid-template-columns:1fr}.actions .btn{width:100%;min-width:0;flex-basis:auto}.catalog-card{min-height:0}.catalog-card .btn{width:100%}}
 </style>
 </head>
 <body>
@@ -149,6 +150,30 @@ main .btn{border-radius:8px;min-height:46px;padding:.72rem 1.1rem;text-align:cen
       </article>
     </div>
     <div class="catalog-note"><strong>Não encontrou exatamente o que procura?</strong> O catálogo organiza as soluções atuais, mas a conversa comercial pode começar pela necessidade da empresa. O direcionamento vem depois.</div>
+  </div>
+</section>
+
+<section class="catalog-line">
+  <div class="wrap">
+    <div class="catalog-head">
+      <div><div class="eyebrow">Soluções Parceiras</div><h2>Conexões que complementam a operação da empresa.</h2></div>
+      <p>O GEB conecta empresas e profissionais PJ a soluções de parceiros selecionados para necessidades complementares. A contratação, execução, elegibilidade e condições comerciais são definidas diretamente por cada parceiro.</p>
+    </div>
+    <div class="catalog-grid two">
+      <article class="catalog-card">
+        <span class="tag">Parceiro · Solução financeira</span>
+        <h3>Conta PJ Cora</h3>
+        <p>Conta digital voltada a empresas e profissionais PJ, com recursos para apoiar a organização da rotina financeira do negócio.</p>
+        <a class="btn ghost" href="https://conta.cora.com.br/r/conta-digital/?convite=HM74R&i=NTEwODcyODkwMDAxNjk=&n=RWR1YXJkYQ==" target="_blank" rel="sponsored noopener noreferrer">Conhecer a Conta PJ Cora</a>
+      </article>
+      <article class="catalog-card">
+        <span class="tag">Parceiro · Estrutura e proteção</span>
+        <h3>Company Hero</h3>
+        <p>Soluções para empresas e profissionais PJ, incluindo Plano de Saúde PJ, Registro de Marca, Proteção de Renda e Seguro Acidentes Pessoais.</p>
+        <a class="btn ghost" href="https://parceiros.companyhero.com/lp/51087289-g8hmIQ" target="_blank" rel="sponsored noopener noreferrer">Conhecer as soluções Hero</a>
+      </article>
+    </div>
+    <div class="catalog-note"><strong>Transparência:</strong> estes serviços são oferecidos e contratados com empresas parceiras. O GEB pode receber benefício ou comissão por contratações realizadas por meio dos links de indicação.</div>
   </div>
 </section>
 
