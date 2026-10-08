@@ -34,7 +34,6 @@
         <a href="/acessibilidade/">Acessibilidade</a>
         <a href="/privacidade/">Privacidade</a>
         <a href="/termos/">Termos</a>
-        <a href="/mapa-do-site/">Mapa do site</a>
       </nav>
       <div class="footer-column footer-contact">
         <h2>Atendimento</h2>
