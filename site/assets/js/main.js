@@ -1,4 +1,21 @@
-(()=>{const b=document.querySelector(".menu-toggle"),m=document.querySelector(".menu");if(b&&m)b.addEventListener("click",()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))});document.addEventListener("click",e=>{const a=e.target.closest("[data-event]");if(a&&window.dataLayer)window.dataLayer.push({event:a.dataset.event})})})();
+(()=>{
+  const menu=document.querySelector(".menu");
+  if(menu){
+    menu.innerHTML=`
+      <a href="/nr-1/">NR-1</a>
+      <a href="/solucoes/">Soluções</a>
+      <a href="/palestras/">Palestras</a>
+      <a href="/ecoar/">ECOAR</a>
+      <a href="/conteudo/">Conteúdo</a>
+      <a href="/contato/">Contato</a>
+      <a class="btn primary" href="/orcamento/">Solicitar orçamento</a>
+    `;
+  }
+
+  const b=document.querySelector(".menu-toggle"),m=document.querySelector(".menu");
+  if(b&&m)b.addEventListener("click",()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))});
+  document.addEventListener("click",e=>{const a=e.target.closest("[data-event]");if(a&&window.dataLayer)window.dataLayer.push({event:a.dataset.event})});
+})();
 
 /* Rodapé institucional compartilhado — GEB Empresarial */
 (()=>{
@@ -23,17 +40,19 @@
       </div>
       <nav class="footer-column" aria-label="Soluções empresariais">
         <h2>GEB Empresarial</h2>
+        <a href="/nr-1/">NR-1 e riscos psicossociais</a>
         <a href="/nr-1/diagnostico/">Diagnóstico NR-1</a>
         <a href="/nr-1/programa-continuo/">Programa contínuo</a>
-        <a href="/palestras/">Palestras</a>
+        <a href="/palestras/">Palestras e workshops</a>
         <a href="/ecoar/">ECOAR</a>
       </nav>
-      <nav class="footer-column" aria-label="Institucional e informações">
-        <h2>Conexões</h2>
+      <nav class="footer-column" aria-label="Navegação institucional">
+        <h2>Navegação</h2>
+        <a href="/solucoes/">Soluções</a>
+        <a href="/conteudo/">Conteúdo</a>
+        <a href="/contato/">Contato</a>
+        <a href="/mapa-do-site/">Mapa do site</a>
         <a href="https://grupoeduardabispo.com.br/">GEB Institucional</a>
-        <a href="/acessibilidade/">Acessibilidade</a>
-        <a href="/privacidade/">Privacidade</a>
-        <a href="/termos/">Termos</a>
       </nav>
       <div class="footer-column footer-contact">
         <h2>Atendimento</h2>
@@ -44,8 +63,8 @@
       </div>
     </div>
     <div class="wrap footer-bottom">
-      <small>© 2026 GEB | Empresarial. Todos os direitos reservados.</small>
-      <small>Desenvolvido por <strong>Compass Rose Systems · GEB Tecnologia</strong></small>
+      <small>© 2026 GEB - Grupo Eduarda Bispo. Todos os direitos reservados.</small>
+      <small>Desenvolvido por <a href="https://gebtecnologia.grupoeduardabispo.com.br/"><strong>Compass Rose Systems · GEB Tecnologia</strong></a></small>
     </div>`;
   if(!document.getElementById("topo"))document.body.id="topo";
 })();
