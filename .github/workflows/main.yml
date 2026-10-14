@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: deploy-geb-empresarial
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -33,6 +37,16 @@ jobs:
               for blob in re.findall(r'<script[^>]+type="application/ld\+json"[^>]*>(.*?)</script>',html,re.S):
                   try: json.loads(blob)
                   except ValueError: errors.append("Invalid JSON-LD")
+          for slug in ("solucoes","apoio-empresarial","parceiros","palestras"):
+              page_path=root/slug/"index.html"
+              if not page_path.is_file(): errors.append("Missing commercial page: "+str(page_path))
+              else:
+                  page_html=page_path.read_text(encoding="utf-8").lower()
+                  if "<h1" not in page_html: errors.append("Missing H1: "+str(page_path))
+                  if f"https://gebempresarial.grupoeduardabispo.com.br/{slug}/" not in page_html: errors.append("Missing canonical: "+str(page_path))
+          js=root/"assets/js/main.js"
+          if not js.is_file() or "/apoio-empresarial/" not in js.read_text(encoding="utf-8") or "/parceiros/" not in js.read_text(encoding="utf-8"):
+              errors.append("Main navigation must include Apoio Empresarial and Parceiros")
           if files["robots.txt"].is_file():
               robots=files["robots.txt"].read_text(encoding="utf-8")
               if not re.search(r'^Sitemap:\s*https://',robots,re.I|re.M): errors.append("robots.txt needs sitemap declaration")
