@@ -3,6 +3,14 @@ name: Deploy GEB Empresarial
 on:
   push:
     branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Pre-deploy SEO audit
         env:
           SITE_DIR: "site"
@@ -37,14 +45,6 @@ on:
           if errors: sys.exit(1)
           print("Pre-deploy SEO checks passed")
           PY
-      - main
-  workflow_dispatch:
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Checkout
         uses: actions/checkout@v5
 
