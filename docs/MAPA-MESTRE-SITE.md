@@ -1,3 +1,18 @@
+# Decisão de arquitetura — revisão de 14/10/2026
+
+Esta definição atualiza a arquitetura comercial previamente prevista neste documento.
+
+- **/solucoes/**: exclusiva para Gestão de Riscos Psicossociais, com Diagnóstico, AEP quando tecnicamente pertinente e Programa Contínuo. A página /nr-1/ permanece como página-pilar explicativa e conduz às ofertas.
+- **/palestras/**: também abriga Desenvolvimento de Lideranças e Equipes, em seção própria /palestras/#liderancas-e-equipes.
+- **/apoio-empresarial/**: página própria para serviços assistidos de certificado digital PF/PJ, regularização de MEI, DASN-SIMEI e notas fiscais/documentos.
+- **/parceiros/**: vitrine de marcas e produtos externos, em que fica clara a contratação direta com o fornecedor. Diferencia-se tanto do apoio assistido do GEB quanto da proposta corporativa de benefícios em /adesao/.
+- **/adesao/**: a proposta de parceria de benefícios possui página explicativa, mas não deve ser apresentada como formulário operante até conclusão de sua integração.
+- **Menu e rodapé**: navegação comum em assets/js/main.js, com links HTML estáticos como fallback. Menu: NR-1, Riscos Psicossociais, Palestras, Apoio Empresarial, Parceiros, ECOAR e Solicitar orçamento.
+- **Governança de marca**: não apresentar plataformas de terceiros como produtos proprietários. Não classificar automaticamente empresas quanto à exigência de PGR.
+- **SEO**: sitemap.xml e mapa do site devem refletir estas rotas.
+
+---
+
 # Mapa Mestre do Site — GEB Empresarial
 
 **Versão:** 1.0  
