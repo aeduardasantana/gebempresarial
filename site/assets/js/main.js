@@ -1,20 +1,12 @@
 (()=>{
-  const menu=document.querySelector(".menu");
-  if(menu){
-    menu.innerHTML=`
-      <a href="/nr-1/">NR-1</a>
-      <a href="/solucoes/">Soluções</a>
-      <a href="/palestras/">Palestras</a>
-      <a href="/ecoar/">ECOAR</a>
-      <a href="/conteudo/">Conteúdo</a>
-      <a href="/contato/">Contato</a>
-      <a class="btn primary" href="/orcamento/">Solicitar orçamento</a>
-    `;
-  }
-
-  const b=document.querySelector(".menu-toggle"),m=document.querySelector(".menu");
-  if(b&&m)b.addEventListener("click",()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))});
-  document.addEventListener("click",e=>{const a=e.target.closest("[data-event]");if(a&&window.dataLayer)window.dataLayer.push({event:a.dataset.event})});
+ const menu=document.querySelector(".menu");
+ if(menu){menu.innerHTML=`<a href="/nr-1/">NR-1</a><a href="/solucoes/">Riscos Psicossociais</a><a href="/palestras/">Palestras</a><a href="/apoio-empresarial/">Apoio Empresarial</a><a href="/parceiros/">Parceiros</a><a href="/ecoar/">ECOAR</a><a class="btn primary" href="/orcamento/">Solicitar orçamento</a>`;menu.id="menu-principal";menu.setAttribute("aria-label","Navegação principal");
+ const path=location.pathname.replace(/index\.html$/,"");menu.querySelectorAll("a").forEach(a=>{if(a.getAttribute("href")===path)a.setAttribute("aria-current","page")});}
+ const button=document.querySelector(".menu-toggle");
+ if(button&&menu){button.setAttribute("aria-controls","menu-principal");button.addEventListener("click",()=>{const open=menu.classList.toggle("open");button.setAttribute("aria-expanded",String(open))});
+ menu.addEventListener("click",e=>{if(e.target.closest("a")){menu.classList.remove("open");button.setAttribute("aria-expanded","false")}});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&menu.classList.contains("open")){menu.classList.remove("open");button.setAttribute("aria-expanded","false");button.focus()}});}
+ document.addEventListener("click",e=>{const a=e.target.closest("[data-event]");if(a&&window.dataLayer)window.dataLayer.push({event:a.dataset.event})});
 })();
 
 /* Rodapé institucional compartilhado — GEB Empresarial */
@@ -43,12 +35,14 @@
         <a href="/nr-1/">NR-1 e riscos psicossociais</a>
         <a href="/nr-1/diagnostico/">Diagnóstico NR-1</a>
         <a href="/nr-1/programa-continuo/">Programa contínuo</a>
-        <a href="/palestras/">Palestras e workshops</a>
+        <a href="/palestras/">Palestras e desenvolvimento</a>
         <a href="/ecoar/">ECOAR</a>
+        <a href="/apoio-empresarial/">Apoio Empresarial</a>
       </nav>
       <nav class="footer-column" aria-label="Navegação institucional">
         <h2>Navegação</h2>
-        <a href="/solucoes/">Soluções</a>
+        <a href="/solucoes/">Riscos Psicossociais</a>
+        <a href="/parceiros/">Parceiros</a>
         <a href="/conteudo/">Conteúdo</a>
         <a href="/contato/">Contato</a>
         <a href="/mapa-do-site/">Mapa do site</a>
