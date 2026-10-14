@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
       - name: Pre-deploy SEO audit
         env:
           SITE_DIR: "site"
@@ -45,9 +48,6 @@ jobs:
           if errors: sys.exit(1)
           print("Pre-deploy SEO checks passed")
           PY
-      - name: Checkout
-        uses: actions/checkout@v5
-
       - name: Install lftp
         run: |
           sudo apt-get update
