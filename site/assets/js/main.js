@@ -76,7 +76,7 @@
   if(!allowed.has(path)||document.getElementById("geb-blog-enterprise"))return;
   const footer=document.querySelector("footer");
   if(!footer)return;
-  const style=document.createElement("link");style.rel="stylesheet";style.href="/assets/css/blog-strip.css?v=20261015";document.head.append(style);
+  const style=document.createElement("link");style.rel="stylesheet";style.href="/assets/css/blog-strip.css?v=20261015-paleta";document.head.append(style);
   const section=document.createElement("section");section.id="geb-blog-enterprise";section.className="geb-blog-enterprise";
   section.setAttribute("aria-labelledby","geb-blog-enterprise-title");
   const wrap=document.createElement("div");wrap.className="geb-blog-enterprise__wrap";
@@ -90,7 +90,7 @@
   heading.append(intro,seeAll);
   const frame=document.createElement("iframe");frame.className="geb-blog-enterprise__frame";
   frame.title="Três artigos mais recentes da categoria Empresarial do Blog GEB";
-  frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Empresarial&limite=3";
+  frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Empresarial&limite=3&tema=empresarial";
   frame.loading="lazy";frame.setAttribute("referrerpolicy","strict-origin-when-cross-origin");
   wrap.append(heading,frame);section.append(wrap);footer.before(section);
   window.addEventListener("message",event=>{
