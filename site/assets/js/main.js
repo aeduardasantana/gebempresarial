@@ -62,3 +62,42 @@
     </div>`;
   if(!document.getElementById("topo"))document.body.id="topo";
 })();
+
+
+/* Blog GEB: exibir apenas em páginas institucionais. Nunca em LPs. */
+(()=>{
+  const allowed=new Set([
+    "/","/nr-1/","/nr-1/diagnostico/","/nr-1/programa-continuo/",
+    "/solucoes/","/apoio-empresarial/","/palestras/","/parceiros/",
+    "/ecoar/","/conteudo/","/contato/","/orcamento/",
+    "/acessibilidade/","/privacidade/","/termos/","/mapa-do-site/"
+  ]);
+  const path=location.pathname.replace(/\/index\.html$/,"/").replace(/\/+$/,"/")||"/";
+  if(!allowed.has(path)||document.getElementById("geb-blog-enterprise"))return;
+  const footer=document.querySelector("footer");
+  if(!footer)return;
+  const style=document.createElement("link");style.rel="stylesheet";style.href="/assets/css/blog-strip.css?v=20261015";document.head.append(style);
+  const section=document.createElement("section");section.id="geb-blog-enterprise";section.className="geb-blog-enterprise";
+  section.setAttribute("aria-labelledby","geb-blog-enterprise-title");
+  const wrap=document.createElement("div");wrap.className="geb-blog-enterprise__wrap";
+  const heading=document.createElement("div");heading.className="geb-blog-enterprise__heading";
+  const intro=document.createElement("div");
+  const eyebrow=document.createElement("span");eyebrow.className="geb-blog-enterprise__eyebrow";eyebrow.textContent="BLOG GEB · EMPRESARIAL";
+  const title=document.createElement("h2");title.className="geb-blog-enterprise__title";title.id="geb-blog-enterprise-title";title.textContent="Conhecimento que fortalece decisões";
+  const description=document.createElement("p");description.className="geb-blog-enterprise__intro";description.textContent="Explore os três artigos mais recentes sobre gestão, negócios, liderança e riscos psicossociais.";
+  intro.append(eyebrow,title,description);
+  const seeAll=document.createElement("a");seeAll.className="geb-blog-enterprise__all";seeAll.href="https://blog.grupoeduardabispo.com.br/?categoria=Empresarial";seeAll.textContent="Ver todos os artigos empresariais →";
+  heading.append(intro,seeAll);
+  const frame=document.createElement("iframe");frame.className="geb-blog-enterprise__frame";
+  frame.title="Três artigos mais recentes da categoria Empresarial do Blog GEB";
+  frame.src="https://blog.grupoeduardabispo.com.br/assets/embed.html?categoria=Empresarial&limite=3";
+  frame.loading="lazy";frame.setAttribute("referrerpolicy","strict-origin-when-cross-origin");
+  wrap.append(heading,frame);section.append(wrap);footer.before(section);
+  window.addEventListener("message",event=>{
+    if(event.origin!=="https://blog.grupoeduardabispo.com.br"||event.source!==frame.contentWindow)return;
+    const data=event.data;
+    if(!data||data.type!=="geb-blog-embed-height")return;
+    const h=Number(data.height);
+    if(Number.isFinite(h)&&h>=100&&h<=2500&&frame.style.height!==Math.ceil(h)+"px")frame.style.height=Math.ceil(h)+"px";
+  });
+})();
