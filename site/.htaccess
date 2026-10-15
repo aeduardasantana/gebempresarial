@@ -1,1 +1,3 @@
 ErrorDocument 404 /404.html
+RedirectMatch 301 ^/conteudo/?$ https://blog.grupoeduardabispo.com.br/?categoria=Empresarial
+RedirectMatch 301 ^/acessibilidade/?$ https://gebempresarial.grupoeduardabispo.com.br/
