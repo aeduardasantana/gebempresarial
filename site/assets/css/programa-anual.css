@@ -269,3 +269,17 @@
  .lp-programa .lp-price-focus>strong{font-size:1.95rem}
 }
 @media(prefers-reduced-motion:reduce){.lp-month,.lp-cycle-option-content{transition:none}}
+
+/* Header enxuto exclusivo da landing page: reduz desvios da consulta comercial. */
+.lp-programa .lp-site-header .lp-nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:1rem}
+.lp-programa .lp-header-cta{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;text-decoration:none;background:#164d37;color:#fff;border-radius:6px;min-height:42px;padding:.58rem 1rem;font-weight:800;font-size:.88rem;text-align:center}
+.lp-programa .lp-header-cta:hover{background:#296347}
+@media(max-width:620px){
+ .lp-programa .lp-site-header .lp-nav{min-height:65px}
+ .lp-programa .lp-site-header .brand{width:156px;flex-basis:156px;height:47px}
+ .lp-programa .lp-header-cta{font-size:.74rem;padding:.5rem .6rem;min-height:40px;max-width:47%;line-height:1.35}
+}
+@media(max-width:360px){
+ .lp-programa .lp-site-header .brand{width:132px;flex-basis:132px}
+ .lp-programa .lp-header-cta{font-size:.7rem}
+}
