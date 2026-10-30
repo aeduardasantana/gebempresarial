@@ -1,94 +1,119 @@
-# Programa anual de palestras — estratégia e aprovação comercial
+# Programa Anual de Palestras — GEB Empresarial
 
-**Status:** PROTÓTIPO FUNCIONAL — NÃO PUBLICAR SEM APROVAÇÃO
-**URL futura:** /palestras/programa-anual/
-**Unidade comercial:** GEB Empresarial
-**Palestrante principal prevista:** Eduarda Bispo
+**Versão:** atualização estratégica da Presidência — 30/10/2026  
+**Status:** REVISÃO DE PRÉ-LANÇAMENTO. Não publicar sem liberação.  
+**URL planejada:** \`/palestras/programa-anual/\`  
+**Marca e titularidade comercial:** GEB Empresarial  
+**Palestrante principal:** Eduarda Bispo  
+**Público comprador:** empresários, gestores e responsáveis por RH de organizações elegíveis geograficamente.
 
-## 1. Diagnóstico e decisão de arquitetura
+## 1. Decisão comercial definitiva para esta versão
 
-A rota /palestras/ já oferece palestras, workshops e treinamentos sob demanda; preservá-la.
-A assinatura anual precisa de LP de produto separada, sem apagar a vitrine dos formatos avulsos.
-Não se trata de diagnóstico, AEP, implementação de NR-1, nem de contrato de programa contínuo de gestão de riscos psicossociais.
+Existe **um único programa anual de palestras, exclusivamente presencial**. A página não deve apresentar modalidades, comparativos, opções de pagamento, descontos ou variantes.
 
-## 2. Segmentos para campanha de 2027
+| Parâmetro | Valor aprovado |
+|---|---|
+| Produto | Programa Anual de Palestras — GEB Empresarial |
+| Modalidade | Exclusivamente presencial |
+| Frequência | Bimestral |
+| Entrega | Seis palestras por ano |
+| Duração | 30 minutos por palestra |
+| Investimento | R$ 3.000,00 |
+| Pagamento | Anual integral |
+| Região comercial | Goiânia e Região Metropolitana |
+| Condição geográfica | Consultar localidades atendidas |
+| Agenda | Seis datas definidas conforme disponibilidade real e calendário acordado |
+| Condição para contratação | Confirmação da localidade, da disponibilidade e das condições contratuais |
 
-Prioridade inicial: proprietários e gestores de pequenas e médias empresas, diretores operacionais e responsáveis por RH que precisam organizar ações recorrentes de desenvolvimento.
-Subsegmento consultivo: organizações com diferentes unidades e interesse em calendário de liderança e comunicação.
-**Critério de qualificação:** região, formato desejado, número de participantes e prazo de início; os dois últimos podem ser consultados no atendimento, sem aumentar a fricção do formulário.
+O preço é **anual e integral**, nunca "R$ 250/mês". Não apresentar frete, transporte, taxas, planos de parcelamento, descontos ou acréscimos sem aprovação expressa.
 
-## 3. Tese, headlines e CTAs
+## 2. Posicionamento e estratégia de conversão
 
-Tese: "O desenvolvimento contínuo de pessoas pode ser acessível, planejado e inserido na agenda corporativa, sem depender de grandes eventos isolados."
+A principal promessa comercial é de **programação presencial anual organizada**, não de preços baixos. Empresários e gestores precisam conciliar metas, comunicação e desenvolvimento das pessoas sem improvisar ações pontuais.
 
-Headline selecionada: **Sua empresa tem um calendário de metas. E o desenvolvimento das pessoas?**
-Alternativa 1: "O desenvolvimento da equipe também merece uma agenda."
-Alternativa 2: "Em 2027, não deixe o desenvolvimento das pessoas para depois."
-Alternativa 3: "Menos palestras avulsas. Mais continuidade para sua equipe."
+Tese central: "O desenvolvimento humano pode ter lugar permanente no calendário da empresa, com investimento anual definido e encontros presenciais previamente acordados."
 
-Critério: a escolhida é mais orientada ao decisor empresarial, menos genérica e permite ativar campanha sazonal sem virar uma promoção efêmera.
+Headline aprovada para a versão de avaliação:
 
-CTAs: "Conhecer as modalidades" (descoberta), "Consultar disponibilidade" (intenção comercial) e "Continuar atendimento no WhatsApp" (ação).
+> Sua empresa tem um calendário de metas. E o desenvolvimento das pessoas?
 
-## 4. Jornada da página
+Alternativas para futuros testes (não publicadas em paralelo):
+- "Seis encontros presenciais. Um ano inteiro de desenvolvimento planejado."
+- "Desenvolvimento humano também faz parte do planejamento de 2027."
+- "Faça das conversas com a equipe um compromisso ao longo do ano."
 
-1. Identificação com a falta de continuidade, sem culpabilização.
-2. Apresentação do modelo de calendário anual.
-3. Comparação interativa online/presencial.
-4. Sugestões de temas organizacionais, sem catálogo fechado.
-5. Autoridade profissional de Eduarda sem transformar a marca em pessoal.
-6. Disponibilidade **real e verificável**, quando houver fonte confiável.
-7. Formulário enxuto que monta uma mensagem para o WhatsApp institucional.
-8. FAQ transparente sobre condições pendentes e limites do produto.
-9. CTA de fechamento.
+**CTA prioritário em todas as seções de decisão:**
+"Consultar disponibilidade para minha empresa".
 
-## 5. Oferta em análise — USO INTERNO, NÃO APROVADO
+**Tom:** profissional, próximo, organizado e premium. Não se apoiar na lógica de descontos, ofertas fictícias ou urgência teatral.
 
-| Modalidade | Palestras | Frequência | Duração | Preço proposto | Total proposto |
-|---|---:|---|---|---:|---:|
-| Online | 12/ano | Mensal | 30 min | R$ 250/mês | R$ 3.000/ano |
-| Presencial | 6/ano | Bimestral | 30 min | R$ 250/mês | R$ 3.000/ano |
+## 3. Arquitetura de conversão da LP
 
-Os dois valores **não estão divulgados** no HTML funcional. O JavaScript foi configurado com preço desativado. Não se informa número de vagas nem prazo comercial que não esteja respaldado.
+1. **Hero:** problema empresarial reconhecível, entrega presencial explicitada, investimento anual e localização atendida em destaque.
+2. **Benefícios:** seis encontros planejados; previsibilidade de investimento; desenvolvimento aplicado ao trabalho.
+3. **Identificação da necessidade:** assuntos importantes que são adiados no cotidiano.
+4. **Funcionamento:** confirmar localidade, acordar calendário e realizar palestras.
+5. **Oferta única:** seis palestras presenciais, frequência bimestral, 30 minutos cada, investimento R$ 3.000, pagamento anual integral, região e restrições.
+6. **Temas orientativos:** comunicação, liderança, convivência, inteligência emocional, colaboração e mudanças; sem prometer catálogo fechado.
+7. **Autoridade:** Eduarda Bispo como palestrante principal, mantendo a solução sob a marca GEB Empresarial.
+8. **Agenda 2027:** disponibilidade exclusivamente real e dependente de região/calendário; não inventar contagens.
+9. **Formulário:** nome, empresa, WhatsApp, cidade e local de realização para consulta comercial.
+10. **FAQ e fechamento:** pagamento, escopo, participantes, localização, agenda, regras contratuais e distinção em relação à NR-1.
 
-**Atenção à margem:** na modalidade presencial, validar distância, tempo de deslocamento, transporte, agendamento e custos. Não considerar automaticamente 30 minutos de palestra como 30 minutos da agenda. Verificar custos adicionais, política geográfica e capacidade real da palestrante antes da venda.
+A LP não substitui a página \`/palestras/\`, que continua destinada a palestras e treinamentos sob demanda. A LP deve permanecer isolada enquanto não for aprovada.
 
-## 6. Regras para escassez legítima
+## 4. Elegibilidade territorial: não inferir cobertura
 
-O objeto de configuração em \`site/assets/js/programa-anual.js\` mantém preço, contagem de vagas e campanha desabilitados.
-Para liberar preço, a direção deve aprovar valor mensal, valor total e contrato anual. Para prazos, informar data real, início/fim e regulamento aplicado sem reinícios artificiais.
-Para quantidade de vagas, substituir configuração estática por fonte confiável — preferencialmente API/back-end da agenda. O protótipo só apresenta contagem explicitamente verificada e recente (menos de 12h), e ainda condiciona à confirmação no atendimento. **Não definir um número arbitrário para estimular conversão.**
-Se a agenda fechar, construir fluxos reais de lista de espera antes de anunciá-la. O protótipo não promete lista de espera.
+A comunicação pode apresentar "Goiânia e Região Metropolitana" como **região comercial**, sempre acompanhada de "consulte localidades atendidas". Não há lista de municípios e endereços elegíveis aprovada. Portanto:
 
-## 7. Captação, mensuração e integridade
+- solicitar cidade e local previsto (bairro, unidade ou endereço);
+- encaminhar os dados ao WhatsApp comercial;
+- confirmar manualmente se aquela localidade é atendida;
+- só oferecer calendário e proposta final após avaliação da disponibilidade logística;
+- não confirmar aprovação geográfica automaticamente no navegador.
 
-**Funcionamento real agora:** o formulário exige nome, empresa, WhatsApp, cidade, UF, modalidade; monta texto com todos os dados e UTMs; redireciona para \`wa.me/551121105473\`. Não há banco de dados, e o envio depende de confirmação da pessoa no WhatsApp. Não chamar esse clique de lead captado.
+Não exibir mapa com pinos ou promessa de cobertura municipal sem dados reais.
 
-**Eventos opcionais:** \`lp_select_plan\`, \`lp_form_start\`, \`lp_form_validation_error\`, \`lp_whatsapp_intent\` e eventos dos CTAs. São emitidos **somente se** \`window.dataLayer\` já existir. Não existe GA/GTM integrado nem base comercial.
-O evento de WhatsApp é intenção de contato; conversão efetiva requer integração/confirmacão do atendimento e deduplicação.
+## 5. Escassez verdadeira: agenda de 2027
 
-**LGPD:** política de privacidade linkada. Revisar com governança jurídica e comercial os fluxos de contato, consentimento quando necessário, armazenamento futuro e minimização.
+É aceitável afirmar que a programação está sujeita à disponibilidade efetiva de agenda. Não é aceitável afirmar "últimas vagas" ou divulgar contagem inventada.
 
-## 8. Checklist de aprovação antes de publicar
+**Implementação atual:** sem estoque de vagas, sem contador regressivo, sem prazo comercial e sem datas de agenda simuladas. O visitante é convidado a consultar. A confirmação da disponibilidade ocorre no atendimento do GEB.
 
-- [ ] Confirmar precificação e viabilidade dos dois modelos (ou optar por divulgação somente sob consulta).
-- [ ] Aprovar contrato anual, forma de cobrança, vigência e inadimplência.
-- [ ] Definir se online é exclusiva por empresa, compartilhada ou outra forma de entrega.
-- [ ] Definir limite de participantes por sessão e capacidade técnica das plataformas.
-- [ ] Aprovar logística presencial: cidades/UF, deslocamento, hospedagem, custos, janela mínima e duração total reservada.
-- [ ] Aprovar reagendamento, cancelamento, alterações de temas, substituição de palestrante e no-show.
-- [ ] Confirmar capacidade real da agenda (número de contratos por formato e ciclos).
-- [ ] Confirmar datas do ciclo de 2027 e prazo efetivo de campanha, se houver.
-- [ ] Aprovar catálogo orientativo de temas e fotografias **reais** da palestrante; inserir foto quando fornecida.
-- [ ] Aprovar prova social somente com registros verdadeiros e autorização.
-- [ ] Configurar CRM/analytics, caso se deseje contabilizar leads e conversões além da intenção de WhatsApp.
-- [ ] Testar mobile (320/375/768/1024), teclado, leitor de tela, VLibras e link WhatsApp.
-- [ ] Remover \`noindex,nofollow\` da LP, incluir a URL no sitemap e na navegação somente depois da aprovação e dos testes.
-- [ ] Autorizar merge/publicação (push na main dispara deploy FTP via GitHub Actions).
+**Evolução possível, dependente de dados:** conectar uma fonte auditável de agenda/contratos 2027, capaz de retornar períodos realmente livres por região. Somente depois disso podem ser exibidos saldos ou datas verificadas, com tratamento de concorrência, atualização e indisponibilidade. Evitar que disponibilidade mostrada no front-end se torne uma promessa de reserva automática.
 
-## 9. Integração com a página geral de palestras
+## 6. Captação, mensuração e conformidade
 
-Após liberação comercial, inserir em /palestras/ um convite discreto e contextual:
-"Precisa manter uma programação ao longo do ano? Conheça o programa anual de palestras."
-CTA: "Conhecer o programa anual" -> /palestras/programa-anual/.
-**Não substituir** a contratação de palestras isoladas nem criar a impressão de que todo treinamento se enquadra na assinatura.
+- Número institucional: **+55 11 2110-5473**.
+- Campo cidade e campo local de realização são obrigatórios.
+- O formulário apenas prepara a mensagem de consulta com nome, empresa, telefone, cidade, local, escopo, investimento e origem de campanha (UTM).
+- O envio só ocorre quando o visitante confirma no aplicativo WhatsApp; **não existe base/CRM conectado**.
+- Há eventos opcionais para \`dataLayer\` se a camada já existir, mas não está configurada uma ferramenta de analytics apenas por isso.
+- Intenção de abrir WhatsApp não equivale a lead recebido ou contrato fechado.
+- Política de privacidade acessível e ausência de retenção pelo próprio formulário estático; revisar fluxos externos de atendimento e LGPD antes da operação.
+- O programa educacional não é diagnóstico psicossocial, implementação de NR-1 nem garantia de conformidade legal.
+
+## 7. Critérios de aprovação antes do merge
+
+- [x] Unificar a oferta e remover todas as opções de modalidade.
+- [x] Publicar preço de R$ 3.000,00 como investimento anual com pagamento integral.
+- [x] Explicar seis palestras presenciais bimestrais de 30 minutos.
+- [x] Comunicar região comercial e necessidade de consulta geográfica.
+- [x] Solicitar cidade e local de realização no formulário.
+- [x] Padronizar o CTA principal.
+- [x] Manter o produto no GEB Empresarial e Eduarda como palestrante principal.
+- [x] Não inventar escassez, datas de calendário e desconto.
+- [ ] Confirmar a lista de localidades realmente atendidas e os requisitos mínimos de espaço.
+- [ ] Definir política de reagendamento, cancelamento e condições contratuais por escrito.
+- [ ] Confirmar o limite de participantes e necessidades técnicas nos encontros presenciais.
+- [ ] Confirmar capacidade real de agenda para 2027, incluindo janelas para deslocamento e preparação.
+- [ ] Confirmar o período inicial e final de vigência e o momento de pagamento conforme contrato.
+- [ ] Incluir fotografia profissional real da palestrante quando aprovada.
+- [ ] Testar no navegador, sobretudo mobile, acessibilidade, VLibras e encaminhamento WhatsApp.
+- [ ] Validar juridicamente os termos comerciais, aviso de privacidade e tratamento dos contatos.
+- [ ] Aprovar publicação, retirar \`noindex,nofollow\`, atualizar sitemap e link da página de palestras.
+- [ ] Executar merge apenas após liberação: o push na \`main\` aciona o deploy FTP.
+
+## 8. Governança de marca
+
+O GEB Empresarial é o titular comercial e concentra o contrato e a jornada comercial do programa. Eduarda Bispo é a palestrante principal e a referência de autoridade para este produto. O conteúdo não transforma a organização em marca pessoal nem atribui certificações, resultados ou contratos não comprovados.
