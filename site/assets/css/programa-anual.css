@@ -63,15 +63,6 @@
 .lp-plan-intro p:not(.lp-eyebrow){color:#c8d7ce;font-size:1.06rem}
 .lp-plan-intro .lp-plan-notice{border-left:3px solid #ccad65;padding-left:1rem;margin-top:2rem;font-size:.88rem}
 .lp-plan-panel{background:#fcfbf7;color:var(--lp-ink);padding:clamp(1.3rem,2.9vw,2.5rem);border-radius:10px;box-shadow:0 30px 55px #0c20167a}
-.lp-selector{display:grid;grid-template-columns:1fr 1fr;gap:.65rem;border:0;margin:0 0 2rem;padding:0;min-width:0}
-.lp-selector legend{font-size:.69rem;letter-spacing:.16em;color:#727e73;font-weight:900;margin-bottom:.8rem}
-.lp-choice{position:relative;display:block;cursor:pointer}
-.lp-choice input{position:absolute;width:1px;height:1px;opacity:0;top:50%;left:50%}
-.lp-choice span{display:flex;flex-direction:column;gap:.25rem;border:1px solid #bdc8be;padding:1rem;border-radius:5px;transition:border-color .2s,background .2s}
-.lp-choice strong{font-size:1.09rem}
-.lp-choice small{color:#577063}
-.lp-choice input:checked+span{background:#e7f0e7;border:2px solid #1e553d;padding:calc(1rem - 1px)}
-.lp-choice input:focus-visible+span{outline:3px solid #ad8132;outline-offset:3px}
 .lp-plan-overline{font-size:.72rem;color:#806b3f;font-weight:900;letter-spacing:.15em}
 .lp-big-number{display:flex;gap:.85rem;align-items:center;margin:.65rem 0 1.7rem;font-size:clamp(4.5rem,8vw,7rem);font-weight:850;letter-spacing:-.09em;line-height:1}
 .lp-big-number small{font-size:1rem;line-height:1.45;letter-spacing:0;font-weight:650;color:#52665b}
@@ -79,7 +70,14 @@
 .lp-facts div{display:flex;justify-content:space-between;gap:1.2rem;border-bottom:1px solid #d5dcd4;padding:.8rem 0}
 .lp-facts span{font-size:.86rem;color:#65746a}
 .lp-facts strong{font-size:.92rem;text-align:right}
-.lp-plan-footnote{color:#5b6b60;font-size:.8rem;min-height:2.7rem;margin:1.2rem 0}
+.lp-plan-footnote{color:#5b6b60;font-size:.84rem;margin:1.3rem 0 1.5rem}
+.lp-price{margin:1.7rem 0 0;padding:1.35rem 0 1.1rem;border-top:2px solid #bd9850;border-bottom:1px solid #d5dcd4;display:flex;flex-direction:column;gap:.15rem}
+.lp-price>span{font-size:.73rem;color:#775b2b;font-weight:900;letter-spacing:.16em}
+.lp-price strong{font-size:clamp(2.7rem,5vw,4rem);letter-spacing:-.07em;line-height:1.26;color:#173c2c}
+.lp-price small{color:#52665b;font-size:.88rem;font-weight:700}
+.lp-hero-region{display:inline-flex;margin:.4rem 0 0;border-left:3px solid #b18420;padding:.25rem 0 .25rem .85rem;color:#3d5b49;font-size:.9rem;font-weight:750}
+.lp-field small{color:#5a6b60;font-size:.8rem;line-height:1.45}
+.lp-form-summary{background:#e4ebe1;border-left:3px solid #b18420;padding:1rem;color:#284635;font-size:.9rem;line-height:1.55}
 .lp-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #ccd5cc;border-left:1px solid #ccd5cc}
 .lp-topic-grid>div{padding:1.8rem;border-right:1px solid #ccd5cc;border-bottom:1px solid #ccd5cc;min-height:215px}
 .lp-topic-grid span{display:block;color:#896f3b;font-size:.7rem;font-weight:850;letter-spacing:.13em}
@@ -117,7 +115,7 @@
 .lp-field input,.lp-field select{border:1px solid #b9c4bc;border-radius:4px;background:#fff;width:100%;padding:.9rem .8rem;min-height:50px;font:inherit;color:#172b20}
 .lp-field input:invalid:not(:placeholder-shown){border-color:#a83a25}
 .lp-field input::placeholder{color:#7d897d}
-.lp-field-grid{display:grid;grid-template-columns:1fr 110px;gap:1rem}
+
 .lp-privacy{font-size:.8rem;color:#53675a}
 .lp-form-status{font-size:.86rem;font-weight:700;min-height:1.3rem;margin:1rem 0 0}
 .lp-faq-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,7rem)}
@@ -135,6 +133,6 @@
 .lp-final em{color:#e1be70}
 .lp-final-content{max-width:850px}
 @media(max-width:1020px){.lp-hero-layout,.lp-plan-layout,.lp-authority-layout,.lp-availability-layout,.lp-form-layout,.lp-faq-layout{grid-template-columns:1fr}.lp-hero-composition{max-width:640px;margin-inline:auto;width:100%}.lp-calendar{min-height:425px}.lp-plan-intro h2{max-width:770px}.lp-authority-decor{min-height:280px}.lp-authority-layout{gap:2.4rem}}
-@media(max-width:760px){.lp-section{padding:4.6rem 0}.lp-hero{padding:3.8rem 0 5rem}.lp-hero h1{font-size:clamp(2.6rem,10.7vw,4.4rem)}.lp-hero-actions{display:grid;grid-template-columns:1fr}.lp-button{justify-content:space-between}.lp-hero-composition{width:calc(100% - 18px);margin:0}.lp-calendar{box-shadow:12px 12px 0 #d5c6a0;min-height:410px}.lp-hero-side-note{display:none}.lp-proofbar-grid{grid-template-columns:1fr;gap:.5rem;padding:1rem 0}.lp-split{grid-template-columns:1fr;gap:1rem}.lp-steps,.lp-topic-grid{grid-template-columns:1fr}.lp-topic-grid>div{min-height:0;padding:1.5rem}.lp-steps li{padding:1.2rem 0}.lp-facts div{gap:.6rem}.lp-field-grid{grid-template-columns:1fr 105px}.lp-authority-decor>span{font-size:8rem}}
-@media(max-width:400px){.lp-hero h1{font-size:2.5rem}.lp-calendar{padding:1.2rem;min-height:385px}.lp-calendar h2{font-size:2.2rem}.lp-selector{gap:.4rem}.lp-choice span{padding:.8rem .5rem}.lp-choice input:checked+span{padding:calc(.8rem - 1px) calc(.5rem - 1px)}.lp-field-grid{grid-template-columns:1fr}.lp-facts div{flex-direction:column;gap:0}.lp-facts strong{text-align:left}}
+@media(max-width:760px){.lp-section{padding:4.6rem 0}.lp-hero{padding:3.8rem 0 5rem}.lp-hero h1{font-size:clamp(2.6rem,10.7vw,4.4rem)}.lp-hero-actions{display:grid;grid-template-columns:1fr}.lp-button{justify-content:space-between}.lp-hero-composition{width:calc(100% - 18px);margin:0}.lp-calendar{box-shadow:12px 12px 0 #d5c6a0;min-height:410px}.lp-hero-side-note{display:none}.lp-proofbar-grid{grid-template-columns:1fr;gap:.5rem;padding:1rem 0}.lp-split{grid-template-columns:1fr;gap:1rem}.lp-steps,.lp-topic-grid{grid-template-columns:1fr}.lp-topic-grid>div{min-height:0;padding:1.5rem}.lp-steps li{padding:1.2rem 0}.lp-facts div{gap:.6rem}.lp-authority-decor>span{font-size:8rem}}
+@media(max-width:400px){.lp-hero h1{font-size:2.5rem}.lp-calendar{padding:1.2rem;min-height:385px}.lp-calendar h2{font-size:2.2rem}.lp-facts div{flex-direction:column;gap:0}.lp-facts strong{text-align:left}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lp-button{transition:none}.lp-button:hover{transform:none}}
