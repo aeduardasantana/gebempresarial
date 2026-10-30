@@ -1,167 +1,108 @@
 /*
- * GEB Empresarial — Programa Anual de Palestras
- * Gatilhos comerciais desativados até aprovação e disponibilidade verificável.
- * Não alterar preços/prazos/estoque sem aprovação da direção e mecanismo confiável de atualização.
+ * GEB Empresarial — Programa Anual Presencial de Palestras | 2027
+ * Decisão comercial da Presidência: oferta única, sem seleção de planos.
+ *
+ * Escassez: nenhum saldo ou prazo é inventado. A disponibilidade real
+ * é confirmada pela equipe antes da contratação. Não há contador regressivo.
+ * Não há backend/CRM: este formulário apenas prepara a mensagem no WhatsApp.
  */
 (() => {
   "use strict";
-  const commercial = Object.freeze({
-    pricingApproved: false,
-    monthlyPriceBRL: null,
-    annualPriceBRL: null,
-    campaignEnabled: false,
-    campaignStartISO: null,
-    campaignDeadlineISO: null,
-    verifiedAvailability: null,
-    availabilityVerifiedAtISO: null
-  });
   const whatsapp = "551121105473";
-  const plans = {
-    online: {
-      title: "PROGRAMA ONLINE",
-      count: "12",
-      frequency: "1 palestra por mês",
-      note: "Formato de participação e limite de público sujeitos à definição comercial.",
-      cta: "Consultar disponibilidade para o plano online"
-    },
-    presencial: {
-      title: "PROGRAMA PRESENCIAL",
-      count: "6",
-      frequency: "1 palestra a cada dois meses",
-      note: "Sujeito à região atendida, agenda e condições de deslocamento, informadas antes da contratação.",
-      cta: "Consultar disponibilidade para o plano presencial"
-    }
-  };
-  const $ = id => document.getElementById(id);
-  const fmtMoney = n => new Intl.NumberFormat("pt-BR", {style:"currency",currency:"BRL",minimumFractionDigits:2}).format(n);
-  const emit = (name, data = {}) => {
+  const product = Object.freeze({
+    name: "Programa Anual de Palestras — GEB Empresarial",
+    year: 2027,
+    type: "presencial",
+    sessions: 6,
+    frequency: "bimestral",
+    durationMinutes: 30,
+    annualPriceBRL: 3000,
+    payment: "anual integral",
+    region: "Goiânia e Região Metropolitana, mediante confirmação da localidade"
+  });
+  const $ = (id) => document.getElementById(id);
+
+  function emit(event, attributes = {}) {
     if (Array.isArray(window.dataLayer)) {
-      window.dataLayer.push({event: name, page_category: "lp_programa_anual_palestras", ...data});
+      window.dataLayer.push({
+        event,
+        page_category: "lp_programa_anual_palestras_presencial",
+        product_type: product.type,
+        product_year: product.year,
+        ...attributes
+      });
     }
-  };
-  let selectedPlan = "online";
-
-  function renderPlan(which) {
-    if (!Object.prototype.hasOwnProperty.call(plans, which)) return;
-    selectedPlan = which;
-    const plan = plans[which];
-    $("plano-tipo").textContent = plan.title;
-    $("plano-quantidade").textContent = plan.count;
-    $("plano-frequencia").textContent = plan.frequency;
-    $("plano-ressalva").textContent = plan.note;
-    $("plano-cta").firstChild.textContent = plan.cta + " ";
-    $("form-modalidade").value = which;
-    const validPrice = commercial.pricingApproved &&
-      Number.isFinite(commercial.monthlyPriceBRL) && commercial.monthlyPriceBRL > 0 &&
-      Number.isFinite(commercial.annualPriceBRL) && commercial.annualPriceBRL > 0;
-    $("plano-investimento").textContent = validPrice
-      ? fmtMoney(commercial.monthlyPriceBRL) + "/mês · " + fmtMoney(commercial.annualPriceBRL) + "/ano"
-      : "Sob consulta";
-    $("valor-aviso").textContent = validPrice
-      ? "Pagamento mensal mediante contratação anual. Sujeito às condições previstas em contrato."
-      : "Valores e condições de contratação estão em validação comercial.";
   }
 
-  document.querySelectorAll('input[name="modalidade"]').forEach(input => {
-    input.addEventListener("change", event => {
-      renderPlan(event.target.value);
-      emit("lp_select_plan", {plan: selectedPlan});
+  document.querySelectorAll("[data-lp-event]").forEach(element => {
+    element.addEventListener("click", () => emit(element.dataset.lpEvent));
+  });
+
+  const form = $("lp-form");
+  if (form) {
+    let formStarted = false;
+    form.addEventListener("focusin", () => {
+      if (!formStarted) {
+        formStarted = true;
+        emit("lp_form_start");
+      }
     });
-  });
-  $("form-modalidade").addEventListener("change", event => {
-    renderPlan(event.target.value);
-    const option = document.querySelector('input[name="modalidade"][value="' + selectedPlan + '"]');
-    if (option) option.checked = true;
-    emit("lp_select_plan", {plan: selectedPlan, source: "form"});
-  });
-  renderPlan(selectedPlan);
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const status = $("form-status");
+      if (!form.checkValidity()) {
+        status.textContent = "Preencha os campos obrigatórios para consultar a disponibilidade.";
+        form.reportValidity();
+        emit("lp_form_validation_error", {reason: "required_field"});
+        return;
+      }
 
-  // A campanha deve ter datas reais com fuso e efeitos comerciais aplicados externamente.
-  const now = new Date();
-  if (commercial.campaignEnabled && commercial.campaignStartISO && commercial.campaignDeadlineISO) {
-    const start = new Date(commercial.campaignStartISO);
-    const end = new Date(commercial.campaignDeadlineISO);
-    if (Number.isFinite(start.valueOf()) && Number.isFinite(end.valueOf()) &&
-        start < end && now >= start && now <= end) {
-      const deadline = new Intl.DateTimeFormat("pt-BR",{
-        dateStyle: "long", timeZone: "America/Sao_Paulo"
-      }).format(end);
-      $("campanha-aviso").textContent = "Condição comercial com encerramento previsto em " + deadline + ", conforme regulamento da campanha.";
-      $("campanha-aviso").hidden = false;
-    }
-  }
-  // Só publicar quantidades quando um sistema confiável validar a disponibilidade
-  // de contratos e a atualização for recente. Não há contador sintético.
-  if (Number.isInteger(commercial.verifiedAvailability) &&
-      commercial.verifiedAvailability >= 0 &&
-      commercial.availabilityVerifiedAtISO) {
-    const verifiedAt = new Date(commercial.availabilityVerifiedAtISO);
-    const freshness = now.valueOf() - verifiedAt.valueOf();
-    const fresh = Number.isFinite(verifiedAt.valueOf()) && freshness >= 0 && freshness < 12 * 60 * 60 * 1000;
-    if (fresh) {
-      const count = commercial.verifiedAvailability;
-      $("disponibilidade-texto").textContent = count > 0
-        ? "Disponibilidade informada pela equipe: " + count +
-          (count === 1 ? " adesão potencial, " : " adesões potenciais, ") +
-          "sujeita à confirmação no atendimento. Modalidade presencial condicionada à região e à logística."
-        : "Não há disponibilidade confirmada neste momento. Consulte a equipe para saber sobre próximos períodos de agenda.";
-    }
+      const value = (id) => $(id).value.trim();
+      const phone = value("telefone").replace(/\D/g, "");
+      if (phone.length < 10 || phone.length > 13) {
+        status.textContent = "Informe um WhatsApp válido, com DDD.";
+        $("telefone").focus();
+        emit("lp_form_validation_error", {reason: "telephone"});
+        return;
+      }
+
+      // Elegibilidade é confirmada pela equipe, não inferida automaticamente:
+      // nem todos os municípios/endereço da região podem ser atendidos.
+      const lines = [
+        "Olá! Gostaria de consultar a disponibilidade do Programa Anual de Palestras do GEB Empresarial para 2027.",
+        "Responsável: " + value("nome"),
+        "Empresa: " + value("empresa"),
+        "WhatsApp de retorno: " + value("telefone"),
+        "Cidade de realização: " + value("cidade"),
+        "Local previsto: " + value("local-realizacao"),
+        "Programa: 6 palestras presenciais bimestrais, de 30 minutos cada.",
+        "Investimento informado: R$ 3.000,00 por ano, com pagamento integral.",
+        "Solicito confirmação de atendimento da localidade, agenda disponível para 2027 e condições contratuais."
+      ];
+
+      const query = new URLSearchParams(window.location.search);
+      const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content"];
+      const utms = utmKeys
+        .filter(key => query.get(key) && query.get(key).length <= 100)
+        .map(key => key + "=" + query.get(key).replace(/[\r\n]/g, " "));
+      if (utms.length) lines.push("Origem do contato: " + utms.join(" | "));
+
+      const link = "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
+      emit("lp_whatsapp_intent", {origin: query.get("utm_source") || "direct"});
+      // O contato só é efetivado quando a pessoa envia a mensagem no WhatsApp.
+      status.textContent = "Abrindo o WhatsApp. Confirme o envio para solicitar sua consulta.";
+      window.location.assign(link);
+    });
   }
 
-  const params = new URLSearchParams(window.location.search);
-  const allowedUTM = ["utm_source","utm_medium","utm_campaign","utm_content"];
-  document.querySelectorAll("[data-lp-event]").forEach(el => {
-    el.addEventListener("click", () => emit(el.dataset.lpEvent, {plan: selectedPlan}));
-  });
-  let formStarted = false;
-  $("lp-form").addEventListener("focusin", () => {
-    if (!formStarted) {
-      formStarted = true;
-      emit("lp_form_start",{plan: selectedPlan});
-    }
-  });
-  $("lp-form").addEventListener("submit", event => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const status = $("form-status");
-    if (!form.checkValidity()) {
-      status.textContent = "Confira os campos obrigatórios e complete as informações antes de continuar.";
-      form.reportValidity();
-      emit("lp_form_validation_error",{plan: selectedPlan});
-      return;
-    }
-    const value = id => $(id).value.trim();
-    const phone = value("telefone").replace(/\D/g,"");
-    if (phone.length < 10 || phone.length > 13) {
-      status.textContent = "Informe um número de WhatsApp válido com DDD.";
-      $("telefone").focus();
-      return;
-    }
-    const selected = plans[selectedPlan];
-    const lines = [
-      "Olá! Gostaria de consultar a assinatura anual de palestras do GEB Empresarial.",
-      "Responsável: " + value("nome"),
-      "Empresa: " + value("empresa"),
-      "WhatsApp de retorno: " + value("telefone"),
-      "Local: " + value("cidade") + " / " + value("estado"),
-      "Modalidade: " + (selectedPlan === "online" ? "Online" : "Presencial"),
-      "Programa: " + selected.count + " palestras anuais, com duração de 30 minutos cada.",
-      "Solicito disponibilidade, condições comerciais e orientações para contratação."
-    ];
-    const utm = allowedUTM
-      .filter(key => params.get(key) && params.get(key).length <= 100)
-      .map(key => key + "=" + params.get(key).replace(/[\r\n]/g, " "));
-    if (utm.length) lines.push("Origem: " + utm.join(" | "));
-    const url = "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
-    emit("lp_whatsapp_intent", {plan: selectedPlan, origin: params.get("utm_source") || "direct"});
-    // A página não tem backend nem registra leads; a mensagem requer envio pelo visitante.
-    status.textContent = "Continuando para o WhatsApp. O envio será confirmado por você no aplicativo.";
-    window.location.assign(url);
-  });
-  // VLibras é recurso adicional: não compromete a navegação se estiver indisponível.
+  // VLibras complementa os recursos nativos de acessibilidade.
   window.addEventListener("load", () => {
     if (window.VLibras && typeof window.VLibras.Widget === "function") {
-      try { new window.VLibras.Widget("https://vlibras.gov.br/app"); } catch (_) { /* fallback textual */ }
+      try {
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      } catch (_) {
+        /* manter toda a navegação textual caso o plugin esteja indisponível */
+      }
     }
   });
 })();
