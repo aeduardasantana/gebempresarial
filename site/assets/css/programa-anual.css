@@ -30,9 +30,9 @@
 .lp-calendar-top{display:flex;justify-content:space-between;gap:1rem;padding-bottom:1.2rem;border-bottom:1px solid #7f988a;font-size:.68rem;letter-spacing:.15em;color:#cdded2;font-weight:800}
 .lp-calendar h2{color:#fff;font-size:clamp(2.2rem,3.3vw,3.75rem);max-width:410px;margin:2.2rem 0 0}
 .lp-calendar p{font-size:1rem;color:#c2d5c8;margin:.7rem 0 1.8rem}
-.lp-month-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin-top:auto}
-.lp-month-grid span{border:1px solid #53705c;padding:.6rem .4rem;font-size:.76rem;color:#c7d8ca;text-align:center;font-weight:750;letter-spacing:.1em}
-.lp-month-grid span:nth-child(3n+1){color:#fff;border-color:#d2b46a;background:#244936}
+.lp-session-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.55rem;margin-top:auto}
+.lp-session-grid span{border:1px solid #53705c;padding:.8rem .25rem;font-size:.64rem;color:#c7d8ca;text-align:center;font-weight:750;letter-spacing:.1em}
+.lp-session-grid span:nth-child(2n+1){color:#fff;border-color:#d2b46a;background:#244936}
 .lp-calendar-foot{display:flex;justify-content:space-between;padding-top:1.4rem;margin-top:1.4rem;border-top:1px solid #7f988a;color:#dbbd73;font-weight:800;font-size:.7rem;text-transform:uppercase;letter-spacing:.15em}
 .lp-hero-side-note{position:absolute;right:-3.3rem;bottom:6%;font-size:.54rem;letter-spacing:.14em;font-weight:800;line-height:1.6;color:#6b5431;writing-mode:vertical-rl}
 .lp-proofbar{background:#e8ebe5;border-top:1px solid #d5ddd2;border-bottom:1px solid #d5ddd2}
