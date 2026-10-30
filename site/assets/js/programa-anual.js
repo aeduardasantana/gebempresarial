@@ -155,12 +155,8 @@
     const url = "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(lines.join("\n"));
     emit("lp_whatsapp_intent", {plan: selectedPlan, origin: params.get("utm_source") || "direct"});
     // A página não tem backend nem registra leads; a mensagem requer envio pelo visitante.
-    const opened = window.open(url, "_blank", "noopener,noreferrer");
-    if (!opened) {
-      window.location.assign(url);
-    } else {
-      status.textContent = "O WhatsApp foi aberto. Confirme o envio da mensagem para concluir seu contato.";
-    }
+    status.textContent = "Continuando para o WhatsApp. O envio será confirmado por você no aplicativo.";
+    window.location.assign(url);
   });
   // VLibras é recurso adicional: não compromete a navegação se estiver indisponível.
   window.addEventListener("load", () => {
