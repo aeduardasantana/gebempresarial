@@ -80,6 +80,8 @@ jobs:
         run: |
           lftp -e "set ftp:passive-mode true; set ftp:ssl-allow no; ls; bye" -u "$FTP_USER","$FTP_PASS" "$FTP_HOST"
 
+      - name: Preparar Google Analytics com consentimento
+        run: python3 scripts/injetar-ga4.py
       - name: Deploy site
         env:
           FTP_HOST: ${{ secrets.HOST }}
