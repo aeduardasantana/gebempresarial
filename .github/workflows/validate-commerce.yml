@@ -1,0 +1,44 @@
+name: Validar revisão comercial GEB Empresarial
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'scripts/validar-comercial.py'
+      - '.github/workflows/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conferir sitemap, catalogo, WhatsApp e paginas
+        run: python3 scripts/validar-comercial.py
+      - name: Conferir JavaScript e LP de Palestras 2027
+        run: |
+          node --check site/assets/js/main.js
+          node --check site/assets/js/programa-anual.js
+          node tests/programa-anual.test.cjs
+      - name: Validar formulários legados e CTAs regionais
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, sys
+          err=[]
+          root=Path('site')
+          for path in sorted(root.glob('nr-1/*/index.html')):
+              if path.parent.name in ('diagnostico','programa-continuo'):continue
+              text=path.read_text()
+              if re.search(r'Solicitar diagn[oó]stic|Falar sobre diagn[oó]stic',text,re.I):
+                  err.append(str(path)+': CTA oferece diagnóstico não homologado')
+              if '/palestras/programa-anual/' in text or 'href="/nr-1/programa-continuo/"' in text:
+                  err.append(str(path)+': mistura landing pages')
+          for path in ('index.html','solucoes/index.html','gestao-processos/index.html','liderancas-equipes/index.html','palestras/index.html','nr-1/index.html','contato/index.html','parceiros/index.html','orcamento/index.html'):
+              s=(root/path).read_text()
+              if 'docs.google.com/forms' in s:err.append(path+': Google Forms')
+          for error in err:print('::error::'+error)
+          if err:sys.exit(1)
+          print('LPs regionais e conversão comercial: OK')
+          PY
