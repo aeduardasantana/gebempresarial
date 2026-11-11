@@ -1,3 +1,8 @@
 ErrorDocument 404 /404.html
+Options -Indexes
+RedirectMatch 301 ^/apoio-empresarial/?$ /gestao-processos/
+RedirectMatch 301 ^/ecoar/?$ https://ecoar.grupoeduardabispo.com.br/
+RedirectMatch 302 ^/nr-1/diagnostico/?$ /nr-1/
+RedirectMatch 301 ^/orcamento/?$ /contato/
 RedirectMatch 301 ^/conteudo/?$ https://blog.grupoeduardabispo.com.br/?categoria=Empresarial
-RedirectMatch 301 ^/acessibilidade/?$ https://gebempresarial.grupoeduardabispo.com.br/
+RedirectMatch 301 ^/acessibilidade/?$ /
