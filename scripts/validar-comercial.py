@@ -17,7 +17,7 @@ for url,name in primary.items():
 home=(root/"index.html").read_text()
 if home.count('<h1')!=1:errors.append("Home: mais de um H1")
 cat=(root/"solucoes/index.html").read_text()
-for name in ("Estruturação de Processos","Gestão Acompanhada","BPO Administrativo","Desenvolvimento de Lideranças e Equipes","Mapeamento Comportamental","Avaliação 360°","Implementação de Medidas Organizacionais","Gestão Psicossocial Contínua","Palestras Corporativas","Workshops Aplicados","Trilhas de Desenvolvimento"):
+for name in ("Estruturação de Processos","Gestão Acompanhada","BPO Administrativo","Desenvolvimento de Lideranças e Equipes","Mapeamento Comportamental","Avaliação 360°","Implementação de Medidas Organizacionais","Programa Contínuo de Gestão Psicossocial","Palestras Corporativas","Workshops Aplicados","Trilhas de Desenvolvimento"):
  if name not in cat:errors.append("Catálogo não inclui "+name)
 if "docs.google.com/forms" in (root/"orcamento/index.html").read_text():errors.append("Google Forms no orçamento")
 for required in ("/palestras/programa-anual/","/nr-1/programa-continuo/"):
