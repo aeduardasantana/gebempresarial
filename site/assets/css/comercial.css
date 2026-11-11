@@ -1,0 +1,102 @@
+
+:root{--ink:#141b16;--paper:#fafbf8;--white:#fff;--accent:#ccef51;--soft:#f0f4e7;--line:#d9e0d6;--max:1160px}
+body.ge-comercial{background:#fff;color:#162018;font-family:"Segoe UI",Arial,sans-serif;line-height:1.65}
+.ge-comercial h1,.ge-comercial h2,.ge-comercial h3{line-height:1.12;letter-spacing:-.035em}
+.ge-comercial .topbar{font-size:.75rem;padding:.3rem 0;background:#111a13}
+.ge-comercial .site-header{border-bottom:1px solid #e0e6dc}
+.ge-comercial .brand{width:190px;height:57px;flex:0 0 190px;background-image:url('/assets/geb-empresarial-logo.webp')}
+.ge-comercial .nav{min-height:78px}
+.ge-comercial .menu{gap:.9rem;align-items:center}
+.ge-comercial .menu>a,.ge-comercial .nav-dropdown>summary{font-size:.87rem;color:#213324;font-weight:700;text-decoration:none;cursor:pointer;white-space:nowrap}
+.ge-comercial .nav-cta{background:#151e16!important;color:#fff!important;font-size:.85rem!important;padding:.75rem .85rem}
+.ge-comercial .btn{border-radius:0;min-height:47px;text-align:center;white-space:normal}
+.ge-comercial .btn.accent{background:var(--accent);border-color:var(--accent);color:#162019}
+.ge-comercial .btn.ghost{background:transparent}
+.ge-comercial .nav-dropdown{position:relative}
+.ge-comercial .nav-dropdown>summary{list-style:none;padding:.4rem 0}
+.ge-comercial .nav-dropdown>summary::-webkit-details-marker{display:none}
+.ge-comercial .nav-dropdown>summary::after{content:"⌄";font-size:.95rem;margin-left:.35rem}
+.ge-comercial .nav-panel{position:absolute;left:-14px;top:calc(100% + 17px);background:#fff;border:1px solid #cbd8cc;box-shadow:0 15px 22px #14241a18;z-index:400;min-width:260px;padding:9px}
+.ge-comercial .nav-panel a{display:block;padding:10px 12px;text-decoration:none;font-size:.88rem;font-weight:650;color:#27332b}
+.ge-comercial .nav-panel a:hover,.ge-comercial .nav-panel a:focus-visible{background:#eff6df}
+.ge-kicker{font-size:.74rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#486532;margin:0 0 1rem}
+.ge-main-hero{background:#f7f9f4;padding:clamp(60px,7vw,96px) 0}
+.ge-hero-grid{display:grid;grid-template-columns:minmax(0,1.17fr) minmax(330px,.83fr);gap:clamp(30px,5vw,90px);align-items:center}
+.ge-hero-text h1{font-size:clamp(2.45rem,4.7vw,5rem);max-width:720px;margin:.1rem 0 1.4rem}
+.ge-lead{font-size:clamp(1.08rem,1.6vw,1.27rem);line-height:1.7;color:#3e5043;max-width:750px}
+.ge-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:2rem}
+.ge-actions a{min-width:185px}
+.ge-hero-panel{background:#151e16;color:#f7fbf3;padding:clamp(20px,3vw,40px);min-height:420px;border-left:7px solid var(--accent);display:flex;flex-direction:column;box-shadow:22px 22px 0 #e4ebdc}
+.ge-panel-top{display:flex;justify-content:space-between;gap:12px;font-size:.69rem;font-weight:800;letter-spacing:.12em;color:#d6e6ca;border-bottom:1px solid #657163;padding-bottom:19px}
+.ge-panel-top span{color:var(--accent)}
+.ge-hero-panel ol{list-style:none;margin:24px 0 12px;padding:0}
+.ge-hero-panel li{display:grid;grid-template-columns:41px 1fr;column-gap:9px;padding:15px 0;border-bottom:1px solid #425245}
+.ge-hero-panel li span{font-size:.85rem;color:var(--accent);font-weight:900}
+.ge-hero-panel li strong{font-size:1.22rem}
+.ge-hero-panel li small{grid-column:2;color:#c7d6c5;font-size:.83rem}
+.ge-hero-panel>p{margin:auto 0 0;font-size:.69rem;font-weight:750;letter-spacing:.16em;color:#bdd3af}
+.ge-section{padding:clamp(55px,6vw,88px) 0}
+.ge-section-light{background:#f1f4eb}
+.ge-section-head{margin:0 0 29px;max-width:770px}
+.ge-section-head h2{font-size:clamp(1.9rem,3vw,3rem);margin:0}
+.ge-section-head>p:not(.ge-kicker){color:#566355;font-size:1.07rem}
+.ge-head-side{display:grid;grid-template-columns:1fr 1fr;gap:3rem;max-width:none}
+.ge-area-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ge-area-card{display:flex;flex-direction:column;min-height:280px;background:#fff;border:1px solid #d6ddd1;border-top:5px solid #141b16;padding:27px 23px;color:#193020;text-decoration:none;transition:transform .2s,border-color .2s}
+.ge-area-card:hover{transform:translateY(-3px);border-top-color:#96bd2b}
+.ge-index{font-size:.75rem;color:#6a795e;font-weight:850;letter-spacing:.13em}
+.ge-area-card h3{font-size:1.55rem;margin:24px 0 9px}
+.ge-area-card p{font-size:.92rem;color:#526153;line-height:1.6;margin:0 0 20px}
+.ge-card-more{margin-top:auto;font-size:.84rem;font-weight:850}
+.ge-two-column{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5.5rem);align-items:start}
+.ge-two-column h2{font-size:clamp(2rem,3.1vw,3rem)}
+.ge-steps{list-style:none;padding:0;margin:0}
+.ge-steps li{display:flex;gap:22px;border-top:1px solid #bfccbb;padding:22px 0}
+.ge-steps li span{color:#596e3e;font-weight:850;font-size:.83rem}
+.ge-steps strong{font-size:1.18rem}.ge-steps p{margin:3px 0;color:#526153}
+.ge-closing{background:#162019;color:#fff}
+.ge-closure{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.ge-closure h2{color:#fff;font-size:clamp(1.9rem,3vw,3rem);max-width:660px}
+.ge-closure p{color:#d1dcca;max-width:650px}
+.ge-closure .ge-kicker{color:#ccef51}
+.ge-closure .btn{flex-shrink:0}
+.ge-page-hero{padding:clamp(50px,6vw,86px) 0;background:#f7f9f4}
+.ge-page-hero h1{font-size:clamp(2.4rem,4.8vw,4.5rem);max-width:850px}
+.ge-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.ge-jump a{padding:11px 14px;text-decoration:none;border:1px solid #cad5c2;background:#fff;font-size:.84rem;font-weight:750}
+.ge-jump a:hover{background:#e6f3ce}
+.ge-catalog-section{scroll-margin-top:90px}
+.ge-catalog-section:nth-of-type(2n){background:#f6f8f4}
+.ge-product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ge-product{display:flex;flex-direction:column;border:1px solid #dbe3d6;background:#fff;padding:25px;min-height:305px;scroll-margin-top:110px}
+.ge-number{color:#94be2a;font-size:.8rem}
+.ge-product h3{font-size:1.34rem;margin:17px 0 8px}
+.ge-product p{font-size:.94rem;color:#526253;line-height:1.6;margin:0 0 23px}
+.ge-product-actions{margin-top:auto;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.ge-text-link,.ge-strong-link{font-size:.85rem;text-decoration:none;font-weight:850}
+.ge-strong-link{color:#496b23}
+.ge-product a:hover,.ge-text-link:hover{text-decoration:underline}
+.ge-section-link{margin-top:23px;font-size:.92rem;font-weight:800;text-align:right}
+.ge-section-link a{text-underline-offset:4px}
+.ge-service-stack{border-top:1px solid #d2dbd0}
+.ge-service-row{display:grid;grid-template-columns:65px minmax(0,1fr) 200px;gap:25px;align-items:start;border-bottom:1px solid #d2dbd0;padding:36px 0;scroll-margin-top:110px}
+.ge-service-no{font-weight:850;font-size:.88rem;color:#637d4b}
+.ge-service-row h2{font-size:clamp(1.6rem,2.4vw,2.4rem);margin:0 0 14px}
+.ge-service-row p{color:#4d6050;margin:0 0 10px;max-width:700px}
+.ge-service-row .ge-service-lead{font-size:1.1rem;color:#1b3222;font-weight:600}
+.ge-service-contact .btn{width:100%}
+.ge-feature-text p{font-size:1.12rem;color:#445747}
+.ge-feature-text a{display:inline-block;margin-top:12px}
+.ge-comercial .footer .footer-column a{display:block}
+.ge-comercial .footer .footer-bottom a{color:#e3e6da}
+.ge-comercial .footer .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap}
+.ge-comercial .footer{border-top:5px solid #ccef51}
+.ge-comercial .footer-column h2{color:#ccef51}
+.ge-comercial .footer-logo{filter:grayscale(1) brightness(0) invert(1)}
+.ge-comercial .footer .footer-cta{border:1px solid #ccef51}
+.ge-comercial .footer .footer-cta:hover{background:#ccef51;color:#101713}
+.ge-comercial a:focus-visible,.ge-comercial button:focus-visible,.ge-comercial summary:focus-visible{outline:3px solid #779e23;outline-offset:4px}
+@media(max-width:1120px){.ge-comercial .menu{gap:.3rem}.ge-comercial .nav-panel{position:static;box-shadow:none;border:0;padding:6px 0 6px 12px;min-width:0}.ge-comercial .menu a,.ge-comercial .nav-dropdown>summary{display:block;padding:12px;font-size:1rem}.ge-comercial .nav-dropdown{width:100%}.ge-comercial .menu{max-height:calc(100dvh - 85px);overflow-y:auto}}
+@media(max-width:970px){.ge-area-grid,.ge-product-grid{grid-template-columns:repeat(2,1fr)}.ge-hero-grid,.ge-two-column,.ge-head-side{grid-template-columns:1fr}.ge-hero-panel{min-height:0;box-shadow:12px 12px 0 #e4ebdc}.ge-closure{align-items:flex-start;flex-direction:column}}
+@media(max-width:650px){.ge-main-hero,.ge-section,.ge-page-hero{padding:46px 0}.ge-hero-text h1{font-size:clamp(2.1rem,9vw,3.2rem)}.ge-area-grid,.ge-product-grid{grid-template-columns:1fr}.ge-area-card{min-height:0}.ge-service-row{grid-template-columns:1fr;gap:13px;padding:25px 0}.ge-service-no{font-size:.8rem}.ge-service-contact .btn{max-width:300px}.ge-closure .btn{width:100%}.ge-actions .btn{flex:1 1 100%}}
+@media(prefers-reduced-motion:reduce){.ge-area-card{transition:none}.ge-area-card:hover{transform:none}}
