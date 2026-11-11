@@ -1,0 +1,226 @@
+/* GEB Empresarial — Direção de arte editorial v3 | 11 nov 2026
+   Escopo: Home, catálogo e quatro áreas. LPs regionais permanecem independentes. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+body.geb-v2.ed-site{--ed-ink:#15271e;--ed-green:#123e2d;--ed-deep:#0c2c21;--ed-gold:#c7a05b;--ed-sand:#f7f6f1;--ed-line:#d9e2db;--ed-soft:#f0f3ef;font-family:'DM Sans',system-ui,sans-serif;line-height:1.68;color:var(--ed-ink);-webkit-font-smoothing:antialiased}
+body.geb-v2.ed-site h1,body.geb-v2.ed-site h2,body.geb-v2.ed-site h3,body.geb-v2.ed-site h4{font-family:'Manrope','DM Sans',sans-serif;letter-spacing:-.045em;line-height:1.16}
+body.geb-v2.ed-site a:focus-visible,body.geb-v2.ed-site button:focus-visible{outline:3px solid #d8a33a;outline-offset:4px}
+body.geb-v2.ed-site .shell{width:min(1280px,calc(100% - clamp(34px,7vw,112px)))}
+body.geb-v2.ed-site .site-header{background:rgba(255,255,255,.98);box-shadow:none}
+body.geb-v2.ed-site .nav{min-height:88px}
+body.geb-v2.ed-site .brand{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.055em}
+body.geb-v2.ed-site .brand-mark{display:flex;align-items:center;justify-content:center;padding:0;background:none;width:44px;height:48px}
+body.geb-v2.ed-site .brand-mark img{width:44px;height:48px;object-fit:contain}
+body.geb-v2.ed-site .nav-link{font-size:.83rem;letter-spacing:.01em}
+body.geb-v2.ed-site .nav-cta{padding:13px 21px;background:var(--ed-deep);border:1px solid var(--ed-deep);border-radius:0}
+body.geb-v2.ed-site .nav-cta:hover{background:#275940}
+body.geb-v2.ed-site .action{border-radius:0;min-height:52px;font-family:'DM Sans',sans-serif;font-weight:750;letter-spacing:-.01em;padding:14px 23px;background:#153f2f}
+body.geb-v2.ed-site .action.outline{background:transparent;border-color:#244a38}
+body.geb-v2.ed-site .action.light{background:#fff;color:#123d2d}
+body.geb-v2.ed-site .eyebrow{font-weight:800;letter-spacing:.17em;font-size:.72rem;color:#946e35;line-height:1.4;text-transform:uppercase}
+body.geb-v2.ed-site .text-link{font-size:.91rem;border:0;padding:5px 0 7px;border-bottom:1px solid #a2b8a7;gap:9px;font-weight:800}
+body.geb-v2.ed-site .text-link span{transition:transform .2s}
+body.geb-v2.ed-site .text-link:hover span{transform:translate(3px,-2px)}
+body.geb-v2.ed-site .cta-band{background:var(--ed-deep);padding:clamp(64px,7vw,103px) 0;position:relative;overflow:hidden}
+body.geb-v2.ed-site .cta-band:before{content:"GEB";font-family:'Manrope',sans-serif;font-size:clamp(140px,24vw,400px);font-weight:800;letter-spacing:-.13em;position:absolute;right:-4%;top:-57%;color:rgba(255,255,255,.035);pointer-events:none}
+body.geb-v2.ed-site .cta-band .cta-row{position:relative;z-index:1}
+body.geb-v2.ed-site .cta-band h2{letter-spacing:-.045em;font-size:clamp(2rem,3.2vw,3.4rem);max-width:740px}
+body.geb-v2.ed-site .cta-band p{font-size:1rem}
+body.geb-v2.ed-site .site-footer{background:#091f18}
+body.geb-v2.ed-site .site-footer .footer-brand{font-family:'Manrope',sans-serif}
+/* Shared art-directed hero: image is part of the grid, not a decorative afterthought. */
+body.geb-v2.ed-site .ed-hero{background:#f9faf7;position:relative;overflow:hidden;border-bottom:1px solid #edf1eb}
+body.geb-v2.ed-site .ed-hero:before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:#b59658}
+body.geb-v2.ed-site .ed-hero-shell{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);min-height:625px;align-items:stretch;gap:clamp(26px,4vw,70px)}
+body.geb-v2.ed-site .ed-hero-copy{padding:clamp(64px,7vw,114px) 0 65px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;z-index:2}
+body.geb-v2.ed-site .ed-kicker{display:flex;align-items:center;gap:17px;color:#34614a;font-size:.72rem;letter-spacing:.15em;font-weight:850;text-transform:uppercase;margin-bottom:30px}
+body.geb-v2.ed-site .ed-kicker:before{content:"";width:46px;height:1px;background:#bc9454}
+body.geb-v2.ed-site .ed-hero h1{font-family:'Manrope',sans-serif;font-weight:800;line-height:1.075;font-size:clamp(2.65rem,4.6vw,5.5rem);letter-spacing:-.065em;max-width:780px;margin:0 0 27px}
+body.geb-v2.ed-site .ed-hero h1 em,body.geb-v2.ed-site .ed-hero h1 span.highlight{font-style:normal;color:#9a7540}
+body.geb-v2.ed-site .ed-hero .lead{font-size:clamp(1.02rem,1.35vw,1.2rem);line-height:1.73;color:#506158;max-width:580px;margin:0 0 32px}
+body.geb-v2.ed-site .ed-hero .actions{margin-bottom:32px;gap:11px}
+body.geb-v2.ed-site .ed-hero-photo{position:relative;align-self:stretch;margin:0;min-height:530px;background:#dae3dc;isolation:isolate}
+body.geb-v2.ed-site .ed-hero-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+body.geb-v2.ed-site .ed-hero-photo:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(8,36,24,.65),transparent 48%)}
+body.geb-v2.ed-site .ed-hero-photo:after{content:"";position:absolute;left:-19px;bottom:31px;border:1px solid rgba(255,255,255,.6);border-right:0;width:40%;height:34%;z-index:1;pointer-events:none}
+body.geb-v2.ed-site .ed-photo-credit{position:absolute;right:23px;bottom:19px;left:28px;color:#fff;z-index:2;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;display:flex;justify-content:space-between;gap:12px;align-items:end}
+body.geb-v2.ed-site .ed-photo-credit strong{font-size:1.45rem;letter-spacing:-.055em;font-family:'Manrope',sans-serif;line-height:1.1;text-transform:none}
+body.geb-v2.ed-site .ed-photo-credit small{color:#d8e6da;font-size:.67rem;font-weight:650;letter-spacing:.04em;text-transform:none}
+body.geb-v2.ed-site .ed-hero-number{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(5rem,9vw,10rem);line-height:.75;letter-spacing:-.12em;color:rgba(18,62,45,.075);position:absolute;left:12%;bottom:1%;pointer-events:none}
+body.geb-v2.ed-site .ed-hero-sub .ed-hero-shell{min-height:560px}
+body.geb-v2.ed-site .ed-hero-sub .ed-hero-copy{padding:78px 0}
+body.geb-v2.ed-site .ed-hero-sub h1{font-size:clamp(2.55rem,4.2vw,4.7rem)}
+body.geb-v2.ed-site .ed-hero-sub .ed-hero-photo{min-height:500px}
+body.geb-v2.ed-site .ed-hero-photo .ed-corner-label{position:absolute;z-index:2;left:0;top:35px;background:#f8f7f1;color:#163e2e;font-weight:850;font-size:.68rem;letter-spacing:.13em;padding:13px 22px;text-transform:uppercase}
+body.geb-v2.ed-site .ed-hero-meta{margin-top:12px;padding-top:18px;border-top:1px solid #d3ded3;display:flex;gap:22px;color:#607268;font-size:.79rem;line-height:1.5;max-width:540px}
+body.geb-v2.ed-site .ed-hero-meta span:first-child{font-family:'Manrope',sans-serif;font-size:1.5rem;font-weight:800;color:#b09055;line-height:1.1}
+/* Home: editorial opening, four distinct stories, coherent visual navigation. */
+body.geb-v2.ed-home .ed-opening{background:#fff;padding:clamp(70px,8vw,112px) 0}
+body.geb-v2.ed-home .ed-opening-grid{display:grid;grid-template-columns:1fr .88fr;gap:clamp(30px,8vw,130px);align-items:start}
+body.geb-v2.ed-home .ed-opening h2{font-size:clamp(2.2rem,3.4vw,3.9rem);margin:16px 0;max-width:700px}
+body.geb-v2.ed-home .ed-opening p:not(.eyebrow){font-size:1.05rem;color:#596e60;line-height:1.8;margin-top:30px}
+body.geb-v2.ed-home .ed-note-line{border-left:2px solid var(--ed-gold);padding:4px 0 4px 24px}
+body.geb-v2.ed-home .ed-note-line strong{display:block;font:800 1.25rem 'Manrope',sans-serif;line-height:1.5}
+body.geb-v2.ed-home .ed-paths{padding:clamp(75px,8vw,118px) 0;background:#eef2ee}
+body.geb-v2.ed-home .ed-section-heading{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:50px}
+body.geb-v2.ed-home .ed-section-heading h2{font-size:clamp(2.25rem,3.6vw,4rem);max-width:710px;margin:12px 0 0}
+body.geb-v2.ed-home .ed-section-heading>p{max-width:290px;color:#576d5e;font-size:1rem;margin:0 0 7px}
+body.geb-v2.ed-home .ed-path-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px 43px}
+body.geb-v2.ed-home .ed-path{background:#fff;display:flex;flex-direction:column;min-width:0}
+body.geb-v2.ed-home .ed-path:nth-child(even){transform:translateY(47px)}
+body.geb-v2.ed-home .ed-path figure{margin:0;height:265px;position:relative;overflow:hidden;background:#e0e7dc}
+body.geb-v2.ed-home .ed-path:nth-child(2) figure{height:335px}
+body.geb-v2.ed-home .ed-path:nth-child(3) figure{height:315px}
+body.geb-v2.ed-home .ed-path img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+body.geb-v2.ed-home .ed-path:hover img{transform:scale(1.035)}
+body.geb-v2.ed-home .ed-path figure:after{content:"";position:absolute;inset:auto 0 0;height:35%;background:linear-gradient(0deg,rgba(9,40,25,.2),transparent)}
+body.geb-v2.ed-home .ed-path-copy{padding:29px 35px 37px}
+body.geb-v2.ed-home .ed-path-index{font:800 .72rem 'Manrope',sans-serif;color:#957442;letter-spacing:.11em}
+body.geb-v2.ed-home .ed-path h3{font-size:clamp(1.65rem,2.2vw,2.4rem);margin:10px 0 16px}
+body.geb-v2.ed-home .ed-path p{font-size:.98rem;color:#5b6d61;max-width:470px}
+body.geb-v2.ed-home .ed-path .text-link{margin-top:8px}
+body.geb-v2.ed-home .ed-process{padding:clamp(90px,9vw,130px) 0 105px;background:#fff}
+body.geb-v2.ed-home .ed-process-heading{max-width:730px;margin-bottom:46px}
+body.geb-v2.ed-home .ed-process h2{font-size:clamp(2.2rem,3.3vw,3.75rem);margin:13px 0 20px}
+body.geb-v2.ed-home .ed-process-heading>p:not(.eyebrow){color:#607466}
+body.geb-v2.ed-home .ed-process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+body.geb-v2.ed-home .ed-process-step{padding:23px 17px 16px 0;border-top:2px solid #c6a05f;position:relative}
+body.geb-v2.ed-home .ed-process-step:before{content:"";position:absolute;right:-1px;top:-6px;width:9px;height:9px;border:1px solid #b89759;background:#fff}
+body.geb-v2.ed-home .ed-process-step b{font:800 3rem/1 'Manrope',sans-serif;color:#d4c5a9;letter-spacing:-.08em;display:block;margin-bottom:29px}
+body.geb-v2.ed-home .ed-process-step h3{font-size:1.18rem;margin:0 0 12px}
+body.geb-v2.ed-home .ed-process-step p{color:#617367;font-size:.91rem;line-height:1.7}
+/* Catalog: index-like editorial presentation instead of repeated equal cards */
+body.geb-v2.ed-catalog .ed-hero-shell{min-height:520px}
+body.geb-v2.ed-catalog .ed-hero-photo{min-height:470px}
+body.geb-v2.ed-catalog .ed-catalog-index{background:#fff;border-bottom:1px solid var(--ed-line);padding:34px 0}
+body.geb-v2.ed-catalog .ed-catalog-index .shell{display:flex;align-items:center;justify-content:space-between;gap:30px}
+body.geb-v2.ed-catalog .ed-catalog-index strong{font:800 clamp(4.5rem,9vw,9rem)/.9 'Manrope',sans-serif;color:#d4e1d8;letter-spacing:-.1em}
+body.geb-v2.ed-catalog .ed-catalog-index p{font-size:1.06rem;max-width:620px;color:#42634e}
+body.geb-v2.ed-catalog .jump{border-bottom:1px solid var(--ed-line);padding-bottom:25px;margin-bottom:0;gap:12px}
+body.geb-v2.ed-catalog .jump a{background:transparent;color:var(--ed-green);border:1px solid #bfd0c0;font-weight:750;padding:12px 17px}
+body.geb-v2.ed-catalog .catalog-area{padding:clamp(65px,6vw,98px) 0;border-top:0;border-bottom:1px solid var(--ed-line)}
+body.geb-v2.ed-catalog .catalog-area:nth-of-type(even){background:transparent}
+body.geb-v2.ed-catalog .area-heading{align-items:center;margin-bottom:33px}
+body.geb-v2.ed-catalog .area-heading>div{max-width:800px}
+body.geb-v2.ed-catalog .area-heading h2{font-size:clamp(2.1rem,3.5vw,3.7rem)}
+body.geb-v2.ed-catalog .services-grid{display:grid;grid-template-columns:1fr;gap:0;counter-reset:service}
+body.geb-v2.ed-catalog .service-card{display:grid;grid-template-columns:minmax(200px,.95fr) minmax(220px,1.3fr) auto;gap:clamp(22px,3vw,54px);align-items:start;padding:28px 4px 29px;border:0;border-top:1px solid var(--ed-line);min-height:0;scroll-margin-top:120px;position:relative}
+body.geb-v2.ed-catalog .service-card:before{counter-increment:service;content:counter(service,decimal-leading-zero);position:absolute;left:0;top:28px;font:800 .77rem 'Manrope',sans-serif;color:#94734b}
+body.geb-v2.ed-catalog .service-card h3{font-size:1.33rem;margin:0;padding-left:42px;max-width:280px}
+body.geb-v2.ed-catalog .service-card>p{font-size:.94rem;margin:0;color:#607366;max-width:430px}
+body.geb-v2.ed-catalog .service-card .item-detail{grid-column:2;grid-row:2;min-height:auto;margin:0;border:0;padding:0}
+body.geb-v2.ed-catalog .service-card .item-detail p{margin:5px 0 0;font-size:.88rem;line-height:1.65}
+body.geb-v2.ed-catalog .service-card .item-detail strong{color:#8d6d35}
+body.geb-v2.ed-catalog .service-card .text-link{grid-column:3;grid-row:1/3;align-self:start;white-space:normal;max-width:170px}
+/* Specialized pages: bespoke section separator, clear reading width, asymmetric information */
+body.geb-v2.ed-hub .ed-hub-intro{background:#fff;border-bottom:1px solid var(--ed-line);padding:48px 0}
+body.geb-v2.ed-hub .ed-hub-intro-inner{display:grid;grid-template-columns:250px minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+body.geb-v2.ed-hub .ed-hub-intro .ed-intro-rail{font:800 .78rem 'Manrope',sans-serif;letter-spacing:.1em;color:#96733f;padding-top:9px;border-top:2px solid #c7a264}
+body.geb-v2.ed-hub .ed-hub-intro p{font-size:clamp(1.2rem,1.8vw,1.72rem);max-width:900px;line-height:1.55;color:#355344;margin:0;font-weight:600;letter-spacing:-.025em}
+body.geb-v2.ed-hub .section:has(>.shell>.service-stack){padding:clamp(70px,7vw,100px) 0}
+body.geb-v2.ed-hub .section:has(>.shell>.service-stack)>.shell{display:grid;grid-template-columns:minmax(210px,.38fr) minmax(0,1fr);gap:clamp(30px,5vw,95px)}
+body.geb-v2.ed-hub .section:has(>.shell>.service-stack) .section-head{position:sticky;top:110px;align-self:start;margin:0}
+body.geb-v2.ed-hub .section:has(>.shell>.service-stack) .section-head h2{font-size:clamp(1.9rem,2.7vw,3rem);max-width:310px}
+body.geb-v2.ed-hub .service-detail{grid-template-columns:54px 1fr;gap:22px;padding:33px 0 45px}
+body.geb-v2.ed-hub .service-count{font:800 2rem 'Manrope',sans-serif;color:#c1a271;letter-spacing:-.07em}
+body.geb-v2.ed-hub .service-detail h3{font-size:clamp(1.3rem,1.8vw,1.85rem);line-height:1.2;margin:0 0 12px}
+body.geb-v2.ed-hub .service-detail .service-summary{font-size:1.01rem;color:#3d5b49;font-weight:650}
+body.geb-v2.ed-hub .service-detail h4{font-size:.68rem;letter-spacing:.14em;margin-top:22px;color:#8b6934}
+body.geb-v2.ed-hub .service-detail p{font-size:.95rem;line-height:1.75;max-width:780px}
+body.geb-v2.ed-hub .service-detail .text-link{margin-top:10px}
+body.geb-v2.ed-hub .ed-workflow{background:var(--ed-soft);padding:clamp(65px,7vw,103px) 0}
+body.geb-v2.ed-hub .ed-workflow-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(30px,6vw,95px);align-items:center}
+body.geb-v2.ed-hub .ed-workflow-image{margin:0;height:380px;overflow:hidden;position:relative;background:#dde7df}
+body.geb-v2.ed-hub .ed-workflow-image img{height:100%;width:100%;object-fit:cover}
+body.geb-v2.ed-hub .ed-workflow-image figcaption{position:absolute;left:0;bottom:0;background:#103c2c;color:#fff;font-size:.77rem;font-weight:800;padding:16px 21px}
+body.geb-v2.ed-hub .ed-workflow h2{font-size:clamp(2rem,3.4vw,3.5rem);margin:13px 0 22px}
+body.geb-v2.ed-hub .ed-workflow p:not(.eyebrow){color:#4c6553;font-size:1rem;max-width:510px}
+body.geb-v2.ed-hub .ed-workflow-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #b7c9bc;margin-top:28px;padding-top:18px;gap:19px}
+body.geb-v2.ed-hub .ed-workflow-steps div{font-size:.79rem;font-weight:800;color:#355f45}
+body.geb-v2.ed-hub .ed-workflow-steps span{display:block;font-size:1.2rem;color:#b89c68;font-weight:900;margin-bottom:7px}
+body.geb-v2.ed-hub .ed-section-anchor{display:flex;gap:22px;align-items:center;color:#809388;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.15em;margin-top:18px}
+body.geb-v2.ed-hub .ed-section-anchor:before{content:"";height:1px;background:#d2ded3;flex:1}
+/* NR-1 journey is an informational index, never a forced sequence of purchases. */
+body.geb-v2.ed-nr1 .ed-nr-map{background:#123b2c;padding:40px 0 46px;color:#fff}
+body.geb-v2.ed-nr1 .ed-nr-map-header{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:22px}
+body.geb-v2.ed-nr1 .ed-nr-map-header h2{font-size:clamp(1.6rem,2.25vw,2.5rem);margin:0}
+body.geb-v2.ed-nr1 .ed-nr-map-header p{max-width:460px;color:#c8ddd0;margin:0;font-size:.91rem}
+body.geb-v2.ed-nr1 .ed-nr-links{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+body.geb-v2.ed-nr1 .ed-nr-links a{color:#f3f6f0;min-height:100px;text-decoration:none;padding:14px 9px;border-top:2px solid #b79c68;border-bottom:1px solid #466d53;background:rgba(255,255,255,.045);transition:background .2s}
+body.geb-v2.ed-nr1 .ed-nr-links a:hover{background:rgba(255,255,255,.13)}
+body.geb-v2.ed-nr1 .ed-nr-links b{font:800 1.5rem 'Manrope',sans-serif;display:block;color:#f5d399;margin-bottom:9px}
+body.geb-v2.ed-nr1 .ed-nr-links span{font-size:.72rem;line-height:1.45;display:block}
+body.geb-v2.ed-nr1 .ed-nr-links .ed-active{border-top-color:#d6e9d4;background:rgba(255,255,255,.13)}
+body.geb-v2.ed-nr1 #etapas-nr1{background:#f0f3ef}
+body.geb-v2.ed-nr1 #etapas-nr1 .service-detail h3{font-size:1.48rem}
+body.geb-v2.ed-nr1 #etapas-nr1 .service-count{font-size:1.3rem;color:#b58c48}
+body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{max-width:860px;color:#4c6853;font-size:.95rem;margin:25px 0}
+/* Responsive layouts deliberately recomposed for reading and touch targets. */
+@media(max-width:1140px){
+ body.geb-v2.ed-site .ed-hero-shell{grid-template-columns:minmax(0,1fr) minmax(0,.83fr);gap:28px}
+ body.geb-v2.ed-site .ed-hero h1{font-size:clamp(2.45rem,4.5vw,4.7rem)}
+ body.geb-v2.ed-catalog .service-card{grid-template-columns:minmax(160px,.8fr) minmax(220px,1.1fr)}
+ body.geb-v2.ed-catalog .service-card .text-link{grid-column:2;grid-row:3}
+ body.geb-v2.ed-catalog .service-card .item-detail{grid-column:2}
+ body.geb-v2.ed-nr1 .ed-nr-links{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:850px){
+ body.geb-v2.ed-site .ed-hero-shell{display:flex;flex-direction:column;gap:0}
+ body.geb-v2.ed-site .ed-hero-copy{padding:58px 0 35px}
+ body.geb-v2.ed-site .ed-hero-photo{width:100%;height:390px;min-height:390px}
+ body.geb-v2.ed-site .ed-hero-sub .ed-hero-photo{height:350px;min-height:350px}
+ body.geb-v2.ed-site .ed-hero h1{font-size:clamp(2.5rem,7.2vw,4.5rem)}
+ body.geb-v2.ed-site .ed-hero-number{display:none}
+ body.geb-v2.ed-home .ed-opening-grid{grid-template-columns:1fr;gap:22px}
+ body.geb-v2.ed-home .ed-section-heading{display:block}
+ body.geb-v2.ed-home .ed-section-heading>p{margin-top:19px}
+ body.geb-v2.ed-home .ed-path-grid{gap:22px}
+ body.geb-v2.ed-home .ed-path:nth-child(even){transform:none}
+ body.geb-v2.ed-home .ed-path figure,body.geb-v2.ed-home .ed-path:nth-child(2) figure,body.geb-v2.ed-home .ed-path:nth-child(3) figure{height:230px}
+ body.geb-v2.ed-home .ed-process-grid{grid-template-columns:repeat(2,1fr)}
+ body.geb-v2.ed-hub .ed-hub-intro-inner{grid-template-columns:1fr;gap:20px}
+ body.geb-v2.ed-hub .section:has(>.shell>.service-stack)>.shell{grid-template-columns:1fr}
+ body.geb-v2.ed-hub .section:has(>.shell>.service-stack) .section-head{position:static;margin-bottom:18px}
+ body.geb-v2.ed-hub .ed-workflow-grid{grid-template-columns:1fr}
+ body.geb-v2.ed-nr1 .ed-nr-map-header{display:block}
+ body.geb-v2.ed-nr1 .ed-nr-map-header p{margin-top:15px}
+ body.geb-v2.ed-site .cta-row{align-items:start;flex-direction:column}
+}
+@media(max-width:620px){
+ body.geb-v2.ed-site .shell{width:calc(100% - 34px)}
+ body.geb-v2.ed-site .ed-hero h1{font-size:clamp(2.33rem,9.2vw,3.7rem)}
+ body.geb-v2.ed-site .ed-hero-sub h1{font-size:clamp(2.2rem,8.5vw,3.2rem)}
+ body.geb-v2.ed-site .ed-hero .actions{width:100%}
+ body.geb-v2.ed-site .ed-hero .actions .action{width:100%}
+ body.geb-v2.ed-site .ed-hero-photo{height:305px;min-height:305px}
+ body.geb-v2.ed-site .ed-hero-sub .ed-hero-photo{height:280px;min-height:280px}
+ body.geb-v2.ed-site .ed-photo-credit strong{font-size:1.1rem}
+ body.geb-v2.ed-home .ed-path-grid{grid-template-columns:1fr}
+ body.geb-v2.ed-home .ed-path-copy{padding:23px 24px 29px}
+ body.geb-v2.ed-home .ed-process-grid{grid-template-columns:1fr}
+ body.geb-v2.ed-home .ed-process-step b{margin-bottom:12px}
+ body.geb-v2.ed-catalog .ed-catalog-index .shell{align-items:start;flex-direction:column;gap:0}
+ body.geb-v2.ed-catalog .area-heading{display:block}
+ body.geb-v2.ed-catalog .area-heading .text-link{margin-top:20px}
+ body.geb-v2.ed-catalog .service-card{display:block;padding:27px 0 30px}
+ body.geb-v2.ed-catalog .service-card h3{max-width:none;margin:0 0 12px}
+ body.geb-v2.ed-catalog .service-card>p{margin:0 0 17px;padding-left:42px}
+ body.geb-v2.ed-catalog .service-card .item-detail{margin:0 0 20px;padding-left:42px}
+ body.geb-v2.ed-catalog .service-card .text-link{margin-left:42px}
+ body.geb-v2.ed-hub .service-detail{grid-template-columns:39px 1fr;gap:14px}
+ body.geb-v2.ed-hub .service-count{font-size:1.45rem}
+ body.geb-v2.ed-hub .ed-workflow-image{height:275px}
+ body.geb-v2.ed-hub .ed-workflow-steps{grid-template-columns:1fr 1fr}
+ body.geb-v2.ed-nr1 .ed-nr-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.geb-v2.ed-nr1 .ed-nr-links a{min-height:85px}
+}
+@media(prefers-reduced-motion:reduce){
+ body.geb-v2.ed-site *,body.geb-v2.ed-site *:before,body.geb-v2.ed-site *:after{transition-duration:0s!important;animation-duration:0s!important}
+}
+
+/* Bespoke GEB visual motif: workflow, decisions and directed action */
+body.geb-v2.ed-site .ed-photo-graphic{position:absolute;z-index:2;right:0;top:94px;width:230px;height:150px;display:flex;justify-content:center;align-items:center;color:#d4b173;background:rgba(11,48,35,.89);border-left:4px solid #c7a05b;pointer-events:none}
+body.geb-v2.ed-site .ed-art-diagram{display:block;width:183px;height:116px;opacity:.96}
+body.geb-v2.ed-site .ed-hero-photo .ed-corner-label{max-width:58%}
+body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{grid-column:2}
+@media(max-width:850px){body.geb-v2.ed-site .ed-photo-graphic{width:165px;height:107px;top:75px}body.geb-v2.ed-site .ed-art-diagram{width:135px;height:90px}body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{grid-column:auto}}
+@media(max-width:620px){body.geb-v2.ed-site .ed-photo-graphic{width:129px;height:84px;top:67px}body.geb-v2.ed-site .ed-art-diagram{width:101px;height:74px}}
