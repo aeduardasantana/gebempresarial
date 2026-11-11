@@ -1,0 +1,92 @@
+/* GEB Empresarial — Rede de parceiros: direção editorial própria | 11.11.2026 */
+body.geb-v2.ed-site.ed-partners{--partner-ink:#143628;--partner-accent:#bd9a5c;--partner-soft:#eff2ed;--partner-paper:#f8f8f4;color:#162c22}
+body.geb-v2.ed-partners .partner-hero{background:#f8f9f5;position:relative;overflow:hidden}
+body.geb-v2.ed-partners .partner-hero .shell{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);min-height:610px;gap:clamp(30px,4vw,65px)}
+body.geb-v2.ed-partners .partner-hero-copy{padding:clamp(74px,8vw,128px) 0 72px;display:flex;flex-direction:column;align-items:start;justify-content:center}
+body.geb-v2.ed-partners .partner-overline{font-weight:800;font-size:.74rem;letter-spacing:.17em;text-transform:uppercase;color:#80683d;display:flex;align-items:center;gap:18px}
+body.geb-v2.ed-partners .partner-overline:before{content:"";display:inline-block;width:39px;height:2px;background:#b7965c}
+body.geb-v2.ed-partners .partner-hero h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(2.8rem,4.75vw,5.4rem);letter-spacing:-.065em;line-height:1.08;margin:24px 0 24px}
+body.geb-v2.ed-partners .partner-hero h1 em{color:#94754a;font-style:normal}
+body.geb-v2.ed-partners .partner-hero .lead{max-width:560px;color:#536b5d;font-size:1.12rem;line-height:1.68;margin:0 0 33px}
+body.geb-v2.ed-partners .partner-hero-photo{position:relative;margin:0;background:#dfe5dd;min-height:560px;isolation:isolate}
+body.geb-v2.ed-partners .partner-hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+body.geb-v2.ed-partners .partner-hero-photo:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 28%,rgba(6,39,26,.60))}
+body.geb-v2.ed-partners .partner-photo-tag{position:absolute;top:35px;left:0;z-index:2;font-size:.68rem;letter-spacing:.14em;font-weight:800;padding:14px 23px;background:#fff;color:#1d4932}
+body.geb-v2.ed-partners .partner-photo-graphic{position:absolute;right:22px;bottom:20px;z-index:2;color:#e0c28f;width:194px;height:132px;filter:drop-shadow(0 5px 18px #0b3028)}
+body.geb-v2.ed-partners .partner-photo-caption{position:absolute;z-index:2;bottom:39px;left:29px;color:#fff;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:800;max-width:200px;line-height:1.5}
+body.geb-v2.ed-partners .partner-photo-caption small{display:block;font-size:.67rem;letter-spacing:.02em;text-transform:none;font-weight:500;color:#dee8de;margin-top:6px}
+body.geb-v2.ed-partners .partner-wayfinding{border-bottom:1px solid #d6dfd6;background:#fff;position:relative;z-index:3}
+body.geb-v2.ed-partners .partner-wayfinding .shell{display:flex;gap:25px;align-items:center;padding:19px 0}
+body.geb-v2.ed-partners .partner-wayfinding strong{font-size:.75rem;color:#947347;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+body.geb-v2.ed-partners .partner-wayfinding nav{display:flex;flex-wrap:wrap;gap:9px}
+body.geb-v2.ed-partners .partner-wayfinding nav a{display:inline-flex;gap:9px;align-items:center;text-decoration:none;border:1px solid #d6e2d8;padding:10px 14px;font-size:.81rem;font-weight:800;color:#1e5238}
+body.geb-v2.ed-partners .partner-wayfinding nav a:hover{background:#ecf3ec}
+body.geb-v2.ed-partners .partner-wayfinding nav a small{font-size:.71rem;color:#ac8951}
+body.geb-v2.ed-partners .partner-thesis{padding:clamp(75px,8vw,115px) 0;background:#fff}
+body.geb-v2.ed-partners .partner-thesis-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(30px,7vw,130px)}
+body.geb-v2.ed-partners .partner-thesis h2{font-size:clamp(2rem,3.3vw,3.7rem);line-height:1.16;margin:16px 0 0;max-width:700px}
+body.geb-v2.ed-partners .partner-thesis aside{border-left:2px solid #b89b67;padding:5px 0 5px 28px;align-self:center;color:#526959;font-size:1.08rem;line-height:1.8}
+body.geb-v2.ed-partners .partner-thesis aside strong{color:#1b412e}
+body.geb-v2.ed-partners .partner-group{padding:clamp(70px,8vw,112px) 0;scroll-margin-top:120px;position:relative;border-top:1px solid #dce6dd}
+body.geb-v2.ed-partners .partner-group:nth-of-type(even){background:#f4f6f1}
+body.geb-v2.ed-partners .partner-group-heading{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(27px,6vw,95px);align-items:end;margin-bottom:38px}
+body.geb-v2.ed-partners .partner-category-serial{font:800 1rem 'Manrope',sans-serif;color:#b19a71;display:inline-block;border-top:2px solid #b99b62;padding-top:8px;margin-bottom:19px}
+body.geb-v2.ed-partners .partner-group h2{font-size:clamp(2.15rem,3.5vw,3.9rem);margin:0 0 18px}
+body.geb-v2.ed-partners .partner-group-heading p{color:#5b7063;font-size:1.04rem;line-height:1.76;margin:0;max-width:550px}
+body.geb-v2.ed-partners .partner-group-photo{margin:0;height:245px;position:relative;overflow:hidden;background:#d6e1d8}
+body.geb-v2.ed-partners .partner-group-photo img{display:block;width:100%;height:100%;object-fit:cover}
+body.geb-v2.ed-partners .partner-group-photo:after{content:"";position:absolute;inset:0;border:1px solid rgba(28,82,54,.14);pointer-events:none}
+body.geb-v2.ed-partners .partner-group-photo figcaption{position:absolute;bottom:0;right:0;background:#153e2c;color:#fff;padding:11px 17px;font-weight:750;font-size:.71rem;letter-spacing:.05em}
+body.geb-v2.ed-partners .partner-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid #cdd9ce}
+body.geb-v2.ed-partners .partner-item{position:relative;min-height:280px;padding:30px 32px 24px;border-bottom:1px solid #cdd9ce;background:rgba(255,255,255,.55);display:flex;flex-direction:column}
+body.geb-v2.ed-partners .partner-item:not(:last-child){border-right:1px solid #cdd9ce}
+body.geb-v2.ed-partners .partner-item:before{content:"";position:absolute;left:0;top:-1px;width:64px;height:3px;background:#c5a46a}
+body.geb-v2.ed-partners .partner-item-top{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+body.geb-v2.ed-partners .partner-mark{height:50px;min-width:50px;display:flex;justify-content:center;align-items:center;background:#174734;color:#fff;font:800 .83rem 'Manrope',sans-serif;letter-spacing:-.04em;padding:0 7px}
+body.geb-v2.ed-partners .partner-item-top small{font-size:.72rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#786747;line-height:1.4}
+body.geb-v2.ed-partners .partner-item h3{font-size:1.35rem;margin:0 0 10px}
+body.geb-v2.ed-partners .partner-item p{font-size:.96rem;line-height:1.68;color:#55685b;margin:0 0 22px;max-width:340px;flex:1}
+body.geb-v2.ed-partners .partner-item .text-link{font-size:.88rem;align-self:start}
+body.geb-v2.ed-partners .partner-item .text-link:focus-visible{outline:3px solid #c5a15f;outline-offset:5px}
+body.geb-v2.ed-partners .partner-group[data-cols="2"] .partner-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.geb-v2.ed-partners .partner-group[data-cols="1"] .partner-list{grid-template-columns:1fr}
+body.geb-v2.ed-partners .partner-group[data-cols="1"] .partner-item{max-width:780px;min-height:205px}
+body.geb-v2.ed-partners .partner-group[data-cols="1"] .partner-item p{max-width:650px}
+body.geb-v2.ed-partners .partner-footnote{margin:26px 0 0;color:#627667;font-size:.86rem;line-height:1.6}
+body.geb-v2.ed-partners .partner-connector{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.7fr);gap:clamp(30px,6vw,95px);padding:64px 0 0;align-items:center}
+body.geb-v2.ed-partners .partner-connector p{color:#506859;line-height:1.8;font-size:1rem}
+body.geb-v2.ed-partners .partner-connector svg{width:100%;max-width:350px;display:block;justify-self:end;color:#b99b69}
+body.geb-v2.ed-partners .partner-connector strong{color:#234a34}
+body.geb-v2.ed-partners .partner-group .partner-item:only-child{border-right:0}
+@media(max-width:1100px){
+ body.geb-v2.ed-partners .partner-hero .shell{min-height:530px}
+ body.geb-v2.ed-partners .partner-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.geb-v2.ed-partners .partner-item:nth-child(2){border-right:0}
+ body.geb-v2.ed-partners .partner-item:nth-child(3){border-right:1px solid #cdd9ce}
+ body.geb-v2.ed-partners .partner-group[data-cols="2"] .partner-item:nth-child(2){border-right:0}
+}
+@media(max-width:850px){
+ body.geb-v2.ed-partners .partner-hero .shell{display:flex;flex-direction:column;gap:0}
+ body.geb-v2.ed-partners .partner-hero-copy{padding:63px 0 42px}
+ body.geb-v2.ed-partners .partner-hero h1{font-size:clamp(2.7rem,7vw,4.7rem)}
+ body.geb-v2.ed-partners .partner-hero-photo{min-height:350px;height:350px}
+ body.geb-v2.ed-partners .partner-wayfinding .shell{align-items:start;flex-direction:column;gap:12px}
+ body.geb-v2.ed-partners .partner-thesis-grid{grid-template-columns:1fr;gap:22px}
+ body.geb-v2.ed-partners .partner-group-heading{grid-template-columns:1fr;gap:27px}
+ body.geb-v2.ed-partners .partner-group-photo{height:300px}
+ body.geb-v2.ed-partners .partner-connector{grid-template-columns:1fr}
+ body.geb-v2.ed-partners .partner-connector svg{justify-self:start;max-width:280px}
+}
+@media(max-width:620px){
+ body.geb-v2.ed-partners .partner-hero h1{font-size:clamp(2.4rem,10vw,3.4rem)}
+ body.geb-v2.ed-partners .partner-hero-photo{height:295px;min-height:295px}
+ body.geb-v2.ed-partners .partner-photo-graphic{width:130px;right:5px;bottom:4px}
+ body.geb-v2.ed-partners .partner-wayfinding nav{gap:7px}
+ body.geb-v2.ed-partners .partner-wayfinding nav a{font-size:.8rem;padding:9px 11px}
+ body.geb-v2.ed-partners .partner-group-photo{height:215px}
+ body.geb-v2.ed-partners .partner-list,body.geb-v2.ed-partners .partner-group[data-cols="2"] .partner-list{grid-template-columns:1fr}
+ body.geb-v2.ed-partners .partner-item{min-height:210px;padding:24px 4px 28px;border-right:0!important}
+ body.geb-v2.ed-partners .partner-item-top{margin-bottom:20px}
+ body.geb-v2.ed-partners .partner-item p{max-width:none}
+ body.geb-v2.ed-partners .partner-connector{padding-top:50px}
+}

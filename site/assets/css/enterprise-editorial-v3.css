@@ -8,8 +8,7 @@ body.geb-v2.ed-site .shell{width:min(1280px,calc(100% - clamp(34px,7vw,112px)))}
 body.geb-v2.ed-site .site-header{background:rgba(255,255,255,.98);box-shadow:none}
 body.geb-v2.ed-site .nav{min-height:88px}
 body.geb-v2.ed-site .brand{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.055em}
-body.geb-v2.ed-site .brand-mark{display:flex;align-items:center;justify-content:center;padding:0;background:none;width:44px;height:48px}
-body.geb-v2.ed-site .brand-mark img{width:44px;height:48px;object-fit:contain}
+body.geb-v2.ed-site .brand-mark{display:inline-flex;align-items:center;justify-content:center;background:var(--pine);color:#fff;min-width:44px;height:48px;letter-spacing:.05em;font-size:.75rem;font-weight:900;padding:11px 8px;border-radius:3px}
 body.geb-v2.ed-site .nav-link{font-size:.83rem;letter-spacing:.01em}
 body.geb-v2.ed-site .nav-cta{padding:13px 21px;background:var(--ed-deep);border:1px solid var(--ed-deep);border-radius:0}
 body.geb-v2.ed-site .nav-cta:hover{background:#275940}
