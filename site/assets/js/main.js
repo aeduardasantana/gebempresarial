@@ -1,6 +1,14 @@
 /* GEB Empresarial — navegação institucional compartilhada e Blog Empresarial */
 (()=>{
  const path=location.pathname.replace(/\/index\.html$/,"/").replace(/\/+$/,"/")||"/";
+ if(document.body.classList.contains("geb-v2")){
+   window.addEventListener("load",()=>{
+     if(window.VLibras && typeof window.VLibras.Widget==="function" && !document.body.dataset.vlibrasReady){
+       document.body.dataset.vlibrasReady="true";
+       new window.VLibras.Widget("https://vlibras.gov.br/app");
+     }
+   },{once:true});
+ }
  const button=document.querySelector(".menu-toggle"),menu=document.querySelector(".site-nav, .menu");
  if(button&&menu){menu.id=menu.id||"main-navigation";button.setAttribute("aria-controls",menu.id);button.addEventListener("click",()=>{const expanded=button.getAttribute("aria-expanded")==="true";button.setAttribute("aria-expanded",String(!expanded));menu.classList.toggle("open",!expanded)});menu.addEventListener("click",event=>{if(event.target.closest("a")){button.setAttribute("aria-expanded","false");menu.classList.remove("open")}});document.addEventListener("keydown",event=>{if(event.key==="Escape"){button.setAttribute("aria-expanded","false");menu.classList.remove("open")}})}
  if(document.body.classList.contains("geb-v2")){
