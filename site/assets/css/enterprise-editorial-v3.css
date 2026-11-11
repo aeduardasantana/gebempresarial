@@ -216,3 +216,11 @@ body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{max-width:860px;color:#4c6853;font-size:
 @media(prefers-reduced-motion:reduce){
  body.geb-v2.ed-site *,body.geb-v2.ed-site *:before,body.geb-v2.ed-site *:after{transition-duration:0s!important;animation-duration:0s!important}
 }
+
+/* Bespoke GEB visual motif: workflow, decisions and directed action */
+body.geb-v2.ed-site .ed-photo-graphic{position:absolute;z-index:2;right:0;top:94px;width:230px;height:150px;display:flex;justify-content:center;align-items:center;color:#d4b173;background:rgba(11,48,35,.89);border-left:4px solid #c7a05b;pointer-events:none}
+body.geb-v2.ed-site .ed-art-diagram{display:block;width:183px;height:116px;opacity:.96}
+body.geb-v2.ed-site .ed-hero-photo .ed-corner-label{max-width:58%}
+body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{grid-column:2}
+@media(max-width:850px){body.geb-v2.ed-site .ed-photo-graphic{width:165px;height:107px;top:75px}body.geb-v2.ed-site .ed-art-diagram{width:135px;height:90px}body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{grid-column:auto}}
+@media(max-width:620px){body.geb-v2.ed-site .ed-photo-graphic{width:129px;height:84px;top:67px}body.geb-v2.ed-site .ed-art-diagram{width:101px;height:74px}}
