@@ -223,3 +223,23 @@ body.geb-v2.ed-site .ed-hero-photo .ed-corner-label{max-width:58%}
 body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{grid-column:2}
 @media(max-width:850px){body.geb-v2.ed-site .ed-photo-graphic{width:165px;height:107px;top:75px}body.geb-v2.ed-site .ed-art-diagram{width:135px;height:90px}body.geb-v2.ed-nr1 #etapas-nr1>.shell>p{grid-column:auto}}
 @media(max-width:620px){body.geb-v2.ed-site .ed-photo-graphic{width:129px;height:84px;top:67px}body.geb-v2.ed-site .ed-art-diagram{width:101px;height:74px}}
+
+/* Revisão de acabamento | 12.11.2026
+   Fotografias editoriais não recebem diagramas decorativos, legendas
+   redundantes nem traços sobre a imagem. Os significados ficam no conteúdo. */
+body.geb-v2.ed-site .ed-hero-photo::before,
+body.geb-v2.ed-site .ed-hero-photo::after {
+  content: none;
+  display: none;
+}
+body.geb-v2.ed-site .ed-hero-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media print {
+  body.geb-v2.ed-site .ed-hero-photo::before,
+  body.geb-v2.ed-site .ed-hero-photo::after { display: none !important; }
+  body.geb-v2.ed-site .ed-hero-photo { break-inside: avoid; }
+}
